@@ -45,273 +45,268 @@
     I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph">nph</a><br>
   <br>
 	<h1>Instruction table</h1>
-	<pre>
-NULL
-☺ POP
-☻ POP*2
-♥ POP*3
-♦ SWAP
-♣ *2
-♠ CYCLE ...abc->bac
-• CYCLE ...abc->bca
-◘ CYCLE ...abc->cab
-○ CYCLE ...abc->cba
-◙ DUPLICATE
-♂ TRIPLICATE
-♀ QUADRUPLICATE
-♪ REVERSE STACK
-♫ ...ab->...bbbbbb (a bs)
-☼ ...ab->...aaaaaa (b as)
-
-► +
-◄ -
-↕ *
-‼ /
-¶ %
-§ ^
-▬ BIT-NOT
-↨ BIT-OR
-↓ BIT-AND
-→ BIT-XOR
-← BIT-NOR
-∟ BIT-NAND
-↔ BIT-XNOR
-▲ +1
-▼ -1
-
-SP  PUSH 1
-! PUSH 2
-" 3
-# 4
-$ 5
-% 6
-& 7
-' 8
-( 9
-) 10
-* 100
-+ 1000
-, 10000
-- 100000
-. 1000000
-/ 1000000000
-
-0 e
-1 pi
-2 phi
-3 10^a
-4 a^2
-5 e^a
-6 SQRT
-7 push LF
-8 push SP
-9 push NULL
-: push ,
-; begin/end encoded number
-< 0/1 NOT
-= 0/1 OR
-> 0/1 AND
-? 0/1 XOR
-
-@ 0/1 NOR
-A 0/1 NAND
-B 0/1 XNOR
-C PUSH 0
-D push "abc...xyz"
-E push "ABC...XYZ"
-F push "ABC...XYZabc...xyz"
-G push "abc...xyzABC...XYZ"
-H push "qwe...bnm"
-I push "QWE...BNM"
-J push "QWE...BNMqwe...bnm"
-K push "qwe...bnmQWE...BNM"
-L push "abc...xyz0...9"
-M push "0...9abc...xyz"
-N push "0...9ABC...XYZ"
-O split
-P join
-Q chop
-R join "\n"
-S join ""
-T join " "
-U join ","
-V reverse
-W replace string
-X replace regex
-Y split "\n"
-Z split ""
-[ split " "
-\ split ","
-] push "⌠"
-^ push "⌡"
-_ <
-` =
-a >
-b <=
-c >=
-d eval
-e repeat eval
-f a.repeat(b)
-g b.repeat(a)
-h eval a if b
-i eval a if c else begin
-j spread arr onto stack
-k <=>
-l length
-m index
-n head
-o tail
-p slice
-q first b
-r last b
-s floor
-t ceil
-u round
-v 
-w 
-x 
-y 
-z 
-{ 
-| 
-} 
-~ 
-] 
-  
-Ç 
-ü 
-é 
-â 
-ä 
-à 
-å 
-ç 
-ê 
-ë 
-è 
-ï 
-î 
-ì 
-Ä 
-Å 
-  
-É 
-æ 
-Æ 
-ô 
-ö 
-ò 
-û 
-ù 
-ÿ 
-Ö 
-Ü 
-¢ 
-£ 
-¥ 
-₧ 
-ƒ 
-  
-á 
-í 
-ó 
-ú 
-ñ 
-Ñ 
-ª 
-º 
-¿ 
-⌐ 
-¬ 
-½ 
-¼ 
-¡ 
-« 
-» 
-  
-░ 
-▒ 
-▓ 
-│ 
-┤ 
-╡ 
-╢ 
-╖ 
-╕ 
-╣ 
-║ 
-╗ 
-╝ 
-╜ 
-╛ 
-┐ 
-  
-└ 
-┴ 
-┬ 
-├ 
-─ 
-┼ 
-╞ 
-╟ 
-╚ 
-╔ 
-╩ 
-╦ 
-╠ 
-═ 
-╬ 
-╧ 
-  
-╨ 
-╤ 
-╥ 
-╙ 
-╘ 
-╒ 
-╓ 
-╫ 
-╪ 
-┘ 
-┌ 
-█ 
-▄ 
-▌ 
-▐ 
-▀ 
-  
-α 
-ß 
-Γ 
-π 
-Σ 
-σ 
-µ 
-τ 
-Φ 
-Θ 
-Ω 
-δ 
-∞ 
-φ 
-ε 
-∩ 
-  
-≡ 
-± 
-≥ 
-≤ End then begin enc
-⌠ End then begin string
-⌡ begin/end string
-÷ begin/end encoded string
-≈ 
-° 
-∙ 
-· 
-√ 
-ⁿ 
-² 
-■</pre>
+	<p>Generated with <a href="https://tio.run/##bVZpc9NWFP3c@ytu1dImZLGTsNdx6ySmpIQstkNYQ59kJRYYycgKW5ehlFIy5UOAOJCWlrCvXaAsU0inM2KmH81/8B9Jz5Xk1PXUM@e8c5d3331PehqXTngFx@5ZWVHcy5qmMQ@PDw2xUVCuMjzTbee8Y5bZdryCZU9T7cpLHh0ZxfhKxrXdVFu8HageqDucnUghuHiTg8gS9@/uH0pzZ2en0o2OpK4Mqp260ew1FNUuX2nyGkqH97tmry65izwwPjo02J/KpbHKac5lBv81T/HYeGog05DwgDPpnelMNs3ZXKp/OzwPw4IdSQx68OMWxXq5FRtbboip4MctOiuJLbzkNix/hjuodrbCa7GZZY6R/5zXkH@XJ5HxiPsGcx3DIzlk3Av0SAbyUiBTwwPQFwO9K/DPRenQ566FOkyaD5OCyMITbuvCsMwdXcQ8Op7dxl30dii6SeMeeofX0bu8ntbwBnqPN9L7vIlaeDO1clec1oLi1CYcp/ZgiFNHOMapMxJxitWVGHE2qYtLFnVzqWBRD2KTitaxmuym9WxCb@DsWCZHG7k0Uy7w0FbaFKrsKG0OlbxKtCXU7fQB6@a0ZcdMO8@mbTh5M8/2zGHddCnB8VgXy6n1Bgq7TgZCDuPDQMl5fRSlZSgVKgn3hWHx9odHEqeBcE0N7wye4vETJzVKR65UXz9cu3bv0Whrs6sh/ePmCg3ztkWxI8dMeX/swxoNRq6xiTRcfcM7NPqk2dWQvr25QsO8oeaV4xg2a7Qj8gdmQ6fDjf6GLke4XCpaHo3yQceyaQx32ilRJrBY22drlI20RrlIsUbjkWzXaCe75lHTLZs0AVUqKsPksufKd2DXqsM1p83jtDtcLKy7p25otLcuUXlfXaP0/qjp2vkljSZXjesaHeAEfcq9pDhJOid6yeBkL@GNOaqKJMuVTOWF1hSrztBu0VtpmvW6pVqpEKSwYmuKdbIaLIPNYtkM30U6iJ5cU@VZuS47tudgg8o4RIewcpKKXDTtaa9Ah9my89imzQUkk8OesopU4nLRMkw6wlOWW/awjstFFYgyTxUdxyWPDROZM@w6M3aejjIdYzrOdILpJNNnTJ8zfcH0JeNE6PW3wDJwH7gB3AKWgNvAXeAB8BC4B/wK/AI8As4A3wCzwB3gLPAUeA48AV4BfwB/AQvAVSYf9f2bAGrXTqP43xcRuA78DPwOvAQeAxeQhIV92D4K1M7PQWBV/08A3fqY5KMrH6sw4gsXhC4KXQLNnxbCTmqV60I3hBaEKkI3hWRG5bLQj0JXhX6QaXNhyfl5oadCj4QkYf6U0LKk/iR0Teh7IUmu3Be6I7QkNCckcyt3w5KVe0JBW3IClUWhK0LSeUU6rzwUeiDLSGD@vGzpnNAZocCUugvopConhRaqmPhGbOzrzdc4lGcYkV5FK1VUqaKvqmzkHJp@g@dUfSaGdDsr5/hYhDQ0e4vT@E56BdMOX1X5ZOLwl5rd0YXE3Wn4vEbO1y/@55NbnzCLrfi/yerYu/9ChBzfV3jG/hPZ1hL@DnQGV7ZFrnUrUQkzYSQ8pRfNZMJzgUJy0EbJGcOzHDsRgy2@iQIuKe66/HkInTFko8aU47KF28RqC721Wi8slJAGk1qbtTe@v01LxAJztWSiFIS6twSxUvI/ZeuVYmFrWuvKyj8">this</a> script</p>
+	<table><tr><th>Instruction</th><th>What it does</th></tr>
+<tr><th><code> </code></th><th><p>NULL character, does nothing</p></th></tr>
+<tr><th><code>☺</code></th><th><p>POP</p></th></tr>
+<tr><th><code>☻</code></th><th><p>POP*2</p></th></tr>
+<tr><th><code>♥</code></th><th><p>POP*3</p></th></tr>
+<tr><th><code>♦</code></th><th><p>SWAP</p></th></tr>
+<tr><th><code>♣</code></th><th><p>*2</p></th></tr>
+<tr><th><code>♠</code></th><th><p>CYCLE ...abc->bac</p></th></tr>
+<tr><th><code>•</code></th><th><p>CYCLE ...abc->bca</p></th></tr>
+<tr><th><code>◘</code></th><th><p>CYCLE ...abc->cab</p></th></tr>
+<tr><th><code>○</code></th><th><p>CYCLE ...abc->cba</p></th></tr>
+<tr><th><code>◙</code></th><th><p>DUPLICATE</p></th></tr>
+<tr><th><code>♂</code></th><th><p>TRIPLICATE</p></th></tr>
+<tr><th><code>♀</code></th><th><p>QUADRUPLICATE</p></th></tr>
+<tr><th><code>♪</code></th><th><p>REVERSE STACK</p></th></tr>
+<tr><th><code>♫</code></th><th><p>...ab->...bbbbbb (a bs)</p></th></tr>
+<tr><th><code>☼</code></th><th><p>...ab->...aaaaaa (b as)</p></th></tr>
+<tr><th><code>►</code></th><th><p>+</p></th></tr>
+<tr><th><code>◄</code></th><th><p>-</p></th></tr>
+<tr><th><code>↕</code></th><th><p>*</p></th></tr>
+<tr><th><code>‼</code></th><th><p>/</p></th></tr>
+<tr><th><code>¶</code></th><th><p>%</p></th></tr>
+<tr><th><code>§</code></th><th><p>^</p></th></tr>
+<tr><th><code>▬</code></th><th><p>BIT-NOT</p></th></tr>
+<tr><th><code>↨</code></th><th><p>BIT-OR</p></th></tr>
+<tr><th><code>↓</code></th><th><p>BIT-AND</p></th></tr>
+<tr><th><code>→</code></th><th><p>BIT-XOR</p></th></tr>
+<tr><th><code>←</code></th><th><p>BIT-NOR</p></th></tr>
+<tr><th><code>∟</code></th><th><p>BIT-NAND</p></th></tr>
+<tr><th><code>↔</code></th><th><p>BIT-XNOR</p></th></tr>
+<tr><th><code>▲</code></th><th><p>+1</p></th></tr>
+<tr><th><code>▼</code></th><th><p>-1</p></th></tr>
+<tr><th><code> </code></th><th><p>PUSH 1</p></th></tr>
+<tr><th><code>!</code></th><th><p>PUSH 2</p></th></tr>
+<tr><th><code>"</code></th><th><p>3</p></th></tr>
+<tr><th><code>#</code></th><th><p>4</p></th></tr>
+<tr><th><code>$</code></th><th><p>5</p></th></tr>
+<tr><th><code>%</code></th><th><p>6</p></th></tr>
+<tr><th><code>&</code></th><th><p>7</p></th></tr>
+<tr><th><code>'</code></th><th><p>8</p></th></tr>
+<tr><th><code>(</code></th><th><p>9</p></th></tr>
+<tr><th><code>)</code></th><th><p>10</p></th></tr>
+<tr><th><code>*</code></th><th><p>100</p></th></tr>
+<tr><th><code>+</code></th><th><p>1000</p></th></tr>
+<tr><th><code>,</code></th><th><p>10000</p></th></tr>
+<tr><th><code>-</code></th><th><p>100000</p></th></tr>
+<tr><th><code>.</code></th><th><p>1000000</p></th></tr>
+<tr><th><code>/</code></th><th><p>1000000000</p></th></tr>
+<tr><th><code>0</code></th><th><p>e</p></th></tr>
+<tr><th><code>1</code></th><th><p>pi</p></th></tr>
+<tr><th><code>2</code></th><th><p>phi</p></th></tr>
+<tr><th><code>3</code></th><th><p>10^a</p></th></tr>
+<tr><th><code>4</code></th><th><p>a^2</p></th></tr>
+<tr><th><code>5</code></th><th><p>e^a</p></th></tr>
+<tr><th><code>6</code></th><th><p>SQRT</p></th></tr>
+<tr><th><code>7</code></th><th><p>push LF</p></th></tr>
+<tr><th><code>8</code></th><th><p>push SP</p></th></tr>
+<tr><th><code>9</code></th><th><p>push NULL</p></th></tr>
+<tr><th><code>:</code></th><th><p>push ,</p></th></tr>
+<tr><th><code>;</code></th><th><p>begin/end encoded number</p></th></tr>
+<tr><th><code><</code></th><th><p>0/1 NOT</p></th></tr>
+<tr><th><code>=</code></th><th><p>0/1 OR</p></th></tr>
+<tr><th><code>></code></th><th><p>0/1 AND</p></th></tr>
+<tr><th><code>?</code></th><th><p>0/1 XOR</p></th></tr>
+<tr><th><code>@</code></th><th><p>0/1 NOR</p></th></tr>
+<tr><th><code>A</code></th><th><p>0/1 NAND</p></th></tr>
+<tr><th><code>B</code></th><th><p>0/1 XNOR</p></th></tr>
+<tr><th><code>C</code></th><th><p>PUSH 0</p></th></tr>
+<tr><th><code>D</code></th><th><p>push "abc...xyz"</p></th></tr>
+<tr><th><code>E</code></th><th><p>push "ABC...XYZ"</p></th></tr>
+<tr><th><code>F</code></th><th><p>push "ABC...XYZabc...xyz"</p></th></tr>
+<tr><th><code>G</code></th><th><p>push "abc...xyzABC...XYZ"</p></th></tr>
+<tr><th><code>H</code></th><th><p>push "qwe...bnm"</p></th></tr>
+<tr><th><code>I</code></th><th><p>push "QWE...BNM"</p></th></tr>
+<tr><th><code>J</code></th><th><p>push "QWE...BNMqwe...bnm"</p></th></tr>
+<tr><th><code>K</code></th><th><p>push "qwe...bnmQWE...BNM"</p></th></tr>
+<tr><th><code>L</code></th><th><p>push "abc...xyz0...9"</p></th></tr>
+<tr><th><code>M</code></th><th><p>push "0...9abc...xyz"</p></th></tr>
+<tr><th><code>N</code></th><th><p>push "0...9ABC...XYZ"</p></th></tr>
+<tr><th><code>O</code></th><th><p>split</p></th></tr>
+<tr><th><code>P</code></th><th><p>join</p></th></tr>
+<tr><th><code>Q</code></th><th><p>chop</p></th></tr>
+<tr><th><code>R</code></th><th><p>join "</p></th></tr>
+<tr><th><code>"</code></th><th><p></p></th></tr>
+<tr><th><code>S</code></th><th><p>join ""</p></th></tr>
+<tr><th><code>T</code></th><th><p>join " "</p></th></tr>
+<tr><th><code>U</code></th><th><p>join ","</p></th></tr>
+<tr><th><code>V</code></th><th><p>reverse</p></th></tr>
+<tr><th><code>W</code></th><th><p>replace string</p></th></tr>
+<tr><th><code>X</code></th><th><p>replace regex</p></th></tr>
+<tr><th><code>Y</code></th><th><p>split "</p></th></tr>
+<tr><th><code>"</code></th><th><p></p></th></tr>
+<tr><th><code>Z</code></th><th><p>split ""</p></th></tr>
+<tr><th><code>[</code></th><th><p>split " "</p></th></tr>
+<tr><th><code>\</code></th><th><p>split ","</p></th></tr>
+<tr><th><code>]</code></th><th><p>push "⌠"</p></th></tr>
+<tr><th><code>^</code></th><th><p>push "⌡"</p></th></tr>
+<tr><th><code>_</code></th><th><p><</p></th></tr>
+<tr><th><code>`</code></th><th><p>=</p></th></tr>
+<tr><th><code>a</code></th><th><p>></p></th></tr>
+<tr><th><code>b</code></th><th><p><=</p></th></tr>
+<tr><th><code>c</code></th><th><p>>=</p></th></tr>
+<tr><th><code>d</code></th><th><p>eval</p></th></tr>
+<tr><th><code>e</code></th><th><p>repeat eval</p></th></tr>
+<tr><th><code>f</code></th><th><p>a.repeat(b)</p></th></tr>
+<tr><th><code>g</code></th><th><p>b.repeat(a)</p></th></tr>
+<tr><th><code>h</code></th><th><p>eval a if b</p></th></tr>
+<tr><th><code>i</code></th><th><p>eval a if c else begin</p></th></tr>
+<tr><th><code>j</code></th><th><p>spread arr onto stack</p></th></tr>
+<tr><th><code>k</code></th><th><p><=></p></th></tr>
+<tr><th><code>l</code></th><th><p>length</p></th></tr>
+<tr><th><code>m</code></th><th><p>index</p></th></tr>
+<tr><th><code>n</code></th><th><p>head</p></th></tr>
+<tr><th><code>o</code></th><th><p>tail</p></th></tr>
+<tr><th><code>p</code></th><th><p>slice</p></th></tr>
+<tr><th><code>q</code></th><th><p>first b</p></th></tr>
+<tr><th><code>r</code></th><th><p>last b</p></th></tr>
+<tr><th><code>s</code></th><th><p>floor</p></th></tr>
+<tr><th><code>t</code></th><th><p>ceil</p></th></tr>
+<tr><th><code>u</code></th><th><p>round</p></th></tr>
+<tr><th><code>v</code></th><th><p></p></th></tr>
+<tr><th><code>w</code></th><th><p></p></th></tr>
+<tr><th><code>x</code></th><th><p></p></th></tr>
+<tr><th><code>y</code></th><th><p></p></th></tr>
+<tr><th><code>z</code></th><th><p></p></th></tr>
+<tr><th><code>{</code></th><th><p></p></th></tr>
+<tr><th><code>|</code></th><th><p></p></th></tr>
+<tr><th><code>}</code></th><th><p></p></th></tr>
+<tr><th><code>~</code></th><th><p></p></th></tr>
+<tr><th><code>]</code></th><th><p></p></th></tr>
+<tr><th><code>Ç</code></th><th><p></p></th></tr>
+<tr><th><code>ü</code></th><th><p></p></th></tr>
+<tr><th><code>é</code></th><th><p></p></th></tr>
+<tr><th><code>â</code></th><th><p></p></th></tr>
+<tr><th><code>ä</code></th><th><p></p></th></tr>
+<tr><th><code>à</code></th><th><p></p></th></tr>
+<tr><th><code>å</code></th><th><p></p></th></tr>
+<tr><th><code>ç</code></th><th><p></p></th></tr>
+<tr><th><code>ê</code></th><th><p></p></th></tr>
+<tr><th><code>ë</code></th><th><p></p></th></tr>
+<tr><th><code>è</code></th><th><p></p></th></tr>
+<tr><th><code>ï</code></th><th><p></p></th></tr>
+<tr><th><code>î</code></th><th><p></p></th></tr>
+<tr><th><code>ì</code></th><th><p></p></th></tr>
+<tr><th><code>Ä</code></th><th><p></p></th></tr>
+<tr><th><code>Å</code></th><th><p></p></th></tr>
+<tr><th><code>É</code></th><th><p></p></th></tr>
+<tr><th><code>æ</code></th><th><p></p></th></tr>
+<tr><th><code>Æ</code></th><th><p></p></th></tr>
+<tr><th><code>ô</code></th><th><p></p></th></tr>
+<tr><th><code>ö</code></th><th><p></p></th></tr>
+<tr><th><code>ò</code></th><th><p></p></th></tr>
+<tr><th><code>û</code></th><th><p></p></th></tr>
+<tr><th><code>ù</code></th><th><p></p></th></tr>
+<tr><th><code>ÿ</code></th><th><p></p></th></tr>
+<tr><th><code>Ö</code></th><th><p></p></th></tr>
+<tr><th><code>Ü</code></th><th><p></p></th></tr>
+<tr><th><code>¢</code></th><th><p></p></th></tr>
+<tr><th><code>£</code></th><th><p></p></th></tr>
+<tr><th><code>¥</code></th><th><p></p></th></tr>
+<tr><th><code>₧</code></th><th><p></p></th></tr>
+<tr><th><code>ƒ</code></th><th><p></p></th></tr>
+<tr><th><code>á</code></th><th><p></p></th></tr>
+<tr><th><code>í</code></th><th><p></p></th></tr>
+<tr><th><code>ó</code></th><th><p></p></th></tr>
+<tr><th><code>ú</code></th><th><p></p></th></tr>
+<tr><th><code>ñ</code></th><th><p></p></th></tr>
+<tr><th><code>Ñ</code></th><th><p></p></th></tr>
+<tr><th><code>ª</code></th><th><p></p></th></tr>
+<tr><th><code>º</code></th><th><p></p></th></tr>
+<tr><th><code>¿</code></th><th><p></p></th></tr>
+<tr><th><code>⌐</code></th><th><p></p></th></tr>
+<tr><th><code>¬</code></th><th><p></p></th></tr>
+<tr><th><code>½</code></th><th><p></p></th></tr>
+<tr><th><code>¼</code></th><th><p></p></th></tr>
+<tr><th><code>¡</code></th><th><p></p></th></tr>
+<tr><th><code>«</code></th><th><p></p></th></tr>
+<tr><th><code>»</code></th><th><p></p></th></tr>
+<tr><th><code> </code></th><th><p></p></th></tr>
+<tr><th><code>░</code></th><th><p></p></th></tr>
+<tr><th><code>▒</code></th><th><p></p></th></tr>
+<tr><th><code>▓</code></th><th><p></p></th></tr>
+<tr><th><code>│</code></th><th><p></p></th></tr>
+<tr><th><code>┤</code></th><th><p></p></th></tr>
+<tr><th><code>╡</code></th><th><p></p></th></tr>
+<tr><th><code>╢</code></th><th><p></p></th></tr>
+<tr><th><code>╖</code></th><th><p></p></th></tr>
+<tr><th><code>╕</code></th><th><p></p></th></tr>
+<tr><th><code>╣</code></th><th><p></p></th></tr>
+<tr><th><code>║</code></th><th><p></p></th></tr>
+<tr><th><code>╗</code></th><th><p></p></th></tr>
+<tr><th><code>╝</code></th><th><p></p></th></tr>
+<tr><th><code>╜</code></th><th><p></p></th></tr>
+<tr><th><code>╛</code></th><th><p></p></th></tr>
+<tr><th><code>┐</code></th><th><p></p></th></tr>
+<tr><th><code> </code></th><th><p></p></th></tr>
+<tr><th><code>└</code></th><th><p></p></th></tr>
+<tr><th><code>┴</code></th><th><p></p></th></tr>
+<tr><th><code>┬</code></th><th><p></p></th></tr>
+<tr><th><code>├</code></th><th><p></p></th></tr>
+<tr><th><code>─</code></th><th><p></p></th></tr>
+<tr><th><code>┼</code></th><th><p></p></th></tr>
+<tr><th><code>╞</code></th><th><p></p></th></tr>
+<tr><th><code>╟</code></th><th><p></p></th></tr>
+<tr><th><code>╚</code></th><th><p></p></th></tr>
+<tr><th><code>╔</code></th><th><p></p></th></tr>
+<tr><th><code>╩</code></th><th><p></p></th></tr>
+<tr><th><code>╦</code></th><th><p></p></th></tr>
+<tr><th><code>╠</code></th><th><p></p></th></tr>
+<tr><th><code>═</code></th><th><p></p></th></tr>
+<tr><th><code>╬</code></th><th><p></p></th></tr>
+<tr><th><code>╧</code></th><th><p></p></th></tr>
+<tr><th><code> </code></th><th><p></p></th></tr>
+<tr><th><code>╨</code></th><th><p></p></th></tr>
+<tr><th><code>╤</code></th><th><p></p></th></tr>
+<tr><th><code>╥</code></th><th><p></p></th></tr>
+<tr><th><code>╙</code></th><th><p></p></th></tr>
+<tr><th><code>╘</code></th><th><p></p></th></tr>
+<tr><th><code>╒</code></th><th><p></p></th></tr>
+<tr><th><code>╓</code></th><th><p></p></th></tr>
+<tr><th><code>╫</code></th><th><p></p></th></tr>
+<tr><th><code>╪</code></th><th><p></p></th></tr>
+<tr><th><code>┘</code></th><th><p></p></th></tr>
+<tr><th><code>┌</code></th><th><p></p></th></tr>
+<tr><th><code>█</code></th><th><p></p></th></tr>
+<tr><th><code>▄</code></th><th><p></p></th></tr>
+<tr><th><code>▌</code></th><th><p></p></th></tr>
+<tr><th><code>▐</code></th><th><p></p></th></tr>
+<tr><th><code>▀</code></th><th><p></p></th></tr>
+<tr><th><code>α</code></th><th><p></p></th></tr>
+<tr><th><code>ß</code></th><th><p></p></th></tr>
+<tr><th><code>Γ</code></th><th><p></p></th></tr>
+<tr><th><code>π</code></th><th><p></p></th></tr>
+<tr><th><code>Σ</code></th><th><p></p></th></tr>
+<tr><th><code>σ</code></th><th><p></p></th></tr>
+<tr><th><code>µ</code></th><th><p></p></th></tr>
+<tr><th><code>τ</code></th><th><p></p></th></tr>
+<tr><th><code>Φ</code></th><th><p></p></th></tr>
+<tr><th><code>Θ</code></th><th><p></p></th></tr>
+<tr><th><code>Ω</code></th><th><p></p></th></tr>
+<tr><th><code>δ</code></th><th><p></p></th></tr>
+<tr><th><code>∞</code></th><th><p></p></th></tr>
+<tr><th><code>φ</code></th><th><p></p></th></tr>
+<tr><th><code>ε</code></th><th><p></p></th></tr>
+<tr><th><code>∩</code></th><th><p></p></th></tr>
+<tr><th><code>≡</code></th><th><p></p></th></tr>
+<tr><th><code>±</code></th><th><p></p></th></tr>
+<tr><th><code>≥</code></th><th><p></p></th></tr>
+<tr><th><code>≤</code></th><th><p>End then begin enc</p></th></tr>
+<tr><th><code>⌠</code></th><th><p>End then begin string</p></th></tr>
+<tr><th><code>⌡</code></th><th><p>begin/end string</p></th></tr>
+<tr><th><code>÷</code></th><th><p>begin/end encoded string</p></th></tr>
+<tr><th><code>≈</code></th><th><p></p></th></tr>
+<tr><th><code>°</code></th><th><p></p></th></tr>
+<tr><th><code>∙</code></th><th><p></p></th></tr>
+<tr><th><code>·</code></th><th><p></p></th></tr>
+<tr><th><code>√</code></th><th><p></p></th></tr>
+<tr><th><code>ⁿ</code></th><th><p></p></th></tr>
+<tr><th><code>²</code></th><th><p></p></th></tr>
+<tr><th><code>■</code></th><th><p></p></th></tr>
+</table>
 </body>
 <script type="text/javascript" src="integral.js"></script>
 <script>
