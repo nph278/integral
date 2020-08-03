@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <style type="text/css">
+    html{
+      color: white;
+      background-color: grey;
+      font-family: courier;
+    }
+  </style>
+</head>
+<body>
+    <br><br><br><br><br><br><br>
+
+    <h1>Interpret</h1>
+    <h2>Code</h2><textarea id="codelm"></textarea><br><span id="byteselm">0</span> bytes.<br><button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run</button><br><br>
+    <h2>Input</h2><textarea id="inelm"></textarea><br>
+    <h2>Output</h2><textarea id="outelm"></textarea><br>
+    <h1>Encode Number (Positive Integers)</h1>
+    <input type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
+    <input type="text" id="numoutelm"><br>
+    <h1>Encode String (only ASCII - {}|~] but only encodes a-z+SP)</h1>
+    <input type="text" id="strelm">
+    <input type="text" id="stroutelm"><br><br><br>
+
+    <h1>About</h1>
+
+    Integral is a stacked-based programming language that I came up with.<br>
+    It uses code page 437.<br>
+    I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph">nph</a><br>
+    Send suggestions for the language to carllegrone@gmail.com
+
+    <h1>Reference table</h1>
+
+
+NULL<br>
+☺ POP<br>
+☻ POP*2<br>
+♥ POP*3<br>
+♦ SWAP<br>
+♣ *2<br>
+♠ CYCLE ...abc->bac<br>
+• CYCLE ...abc->bca<br>
+◘ CYCLE ...abc->cab<br>
+○ CYCLE ...abc->cba<br>
+◙ DUPLICATE<br>
+♂ TRIPLICATE<br>
+♀ QUADRUPLICATE<br>
+♪ REVERSE STACK<br>
+♫ ...ab->...bbbbbb (a bs)<br>
+☼ ...ab->...aaaaaa (b as)<br>
+
+► +<br>
+◄ -<br>
+↕ *<br>
+‼ /<br>
+¶ %<br>
+§ ^<br>
+▬ BIT-NOT<br>
+↨ BIT-OR<br>
+↓ BIT-AND<br>
+→ BIT-XOR<br>
+← BIT-NOR<br>
+∟ BIT-NAND<br>
+↔ BIT-XNOR<br>
+▲ +1<br>
+▼ -1<br>
+
+SP  PUSH 1<br>
+! PUSH 2<br>
+" 3<br>
+# 4<br>
+$ 5<br>
+% 6<br>
+& 7<br>
+' 8<br>
+( 9<br>
+) 10<br>
+* 100<br>
++ 1000<br>
+, 10000<br>
+- 100000<br>
+. 1000000<br>
+/ 1000000000<br>
+
+0 e<br>
+1 pi<br>
+2 phi<br>
+3 10^a<br>
+4 a^2<br>
+5 e^a<br>
+6 SQRT<br>
+7 push LF<br>
+8 push SP<br>
+9 push NULL<br>
+: push ,<br>
+; begin/end encoded number<br>
+< 0/1 NOT<br>
+= 0/1 OR<br>
+> 0/1 AND<br>
+? 0/1 XOR<br>
+
+@ 0/1 NOR<br>
+A 0/1 NAND<br>
+B 0/1 XNOR<br>
+C PUSH 0<br>
+D push "abc...xyz"<br>
+E push "ABC...XYZ"<br>
+F push "ABC...XYZabc...xyz"<br>
+G push "abc...xyzABC...XYZ"<br>
+H push "qwe...bnm"<br>
+I push "QWE...BNM"<br>
+J push "QWE...BNMqwe...bnm"<br>
+K push "qwe...bnmQWE...BNM"<br>
+L push "abc...xyz0...9"<br>
+M push "0...9abc...xyz"<br>
+N push "0...9ABC...XYZ"<br>
+O split<br>
+P join<br>
+Q chop<br>
+R join "\n"<br>
+S join ""<br>
+T join " "<br>
+U join ","<br>
+V reverse<br>
+W replace string<br>
+X replace regex<br>
+Y split "\n"<br>
+Z split ""<br>
+[ split " "<br>
+\ split ","<br>
+] push "⌠"<br>
+^ push "⌡"<br>
+_ <<br>
+` =<br>
+a ><br>
+b <=<br>
+c >=<br>
+d eval<br>
+e repeat eval<br>
+f a.repeat(b)<br>
+g b.repeat(a)<br>
+h eval a if b<br>
+i eval a if c else begin<br>
+j spread arr onto stack<br>
+k <=><br>
+l length<br>
+m index<br>
+n head<br>
+o tail<br>
+p slice<br>
+q first b<br>
+r last b<br>
+s floor<br>
+t ceil<br>
+u round<br>
+v <br>
+w <br>
+x <br>
+y <br>
+z <br>
+{ <br>
+| <br>
+} <br>
+~ <br>
+] <br>
+  <br>
+Ç <br>
+ü <br>
+é <br>
+â <br>
+ä <br>
+à <br>
+å <br>
+ç <br>
+ê <br>
+ë <br>
+è <br>
+ï <br>
+î <br>
+ì <br>
+Ä <br>
+Å <br>
+  <br>
+É <br>
+æ <br>
+Æ <br>
+ô <br>
+ö <br>
+ò <br>
+û <br>
+ù <br>
+ÿ <br>
+Ö <br>
+Ü <br>
+¢ <br>
+£ <br>
+¥ <br>
+₧ <br>
+ƒ <br>
+  <br>
+á <br>
+í <br>
+ó <br>
+ú <br>
+ñ <br>
+Ñ <br>
+ª <br>
+º <br>
+¿ <br>
+⌐ <br>
+¬ <br>
+½ <br>
+¼ <br>
+¡ <br>
+« <br>
+» <br>
+  <br>
+░ <br>
+▒ <br>
+▓ <br>
+│ <br>
+┤ <br>
+╡ <br>
+╢ <br>
+╖ <br>
+╕ <br>
+╣ <br>
+║ <br>
+╗ <br>
+╝ <br>
+╜ <br>
+╛ <br>
+┐ <br>
+  <br>
+└ <br>
+┴ <br>
+┬ <br>
+├ <br>
+─ <br>
+┼ <br>
+╞ <br>
+╟ <br>
+╚ <br>
+╔ <br>
+╩ <br>
+╦ <br>
+╠ <br>
+═ <br>
+╬ <br>
+╧ <br>
+  <br>
+╨ <br>
+╤ <br>
+╥ <br>
+╙ <br>
+╘ <br>
+╒ <br>
+╓ <br>
+╫ <br>
+╪ <br>
+┘ <br>
+┌ <br>
+█ <br>
+▄ <br>
+▌ <br>
+▐ <br>
+▀ <br>
+  <br>
+α <br>
+ß <br>
+Γ <br>
+π <br>
+Σ <br>
+σ <br>
+µ <br>
+τ <br>
+Φ <br>
+Θ <br>
+Ω <br>
+δ <br>
+∞ <br>
+φ <br>
+ε <br>
+∩ <br>
+  <br>
+≡ <br>
+± <br>
+≥ <br>
+≤ End then begin enc<br>
+⌠ End then begin string<br>
+⌡ begin/end string<br>
+÷ begin/end encoded string<br>
+≈ <br>
+° <br>
+∙ <br>
+· <br>
+√ <br>
+ⁿ <br>
+² <br>
+■<br>
+<br>
+  <br>
+</body>
+<script type="text/javascript" src="integral.js"></script>
+</html>
