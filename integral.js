@@ -368,17 +368,17 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
   					intmode = true;
    				break;
  				case "<":
-  					a = Number(stack.pop());
+  					a = stack.pop();
   					stack.push(Number(!a));
    				break;
  				case "=":
-  					b = Number(stack.pop());
-  					a = Number(stack.pop());
+  					b = stack.pop();
+  					a = stack.pop();
   					stack.push(a||b);
    				break;
  				case ">":
-  					b = Number(stack.pop());
-  					a = Number(stack.pop());
+  					b = stack.pop();
+  					a = stack.pop();
   					stack.push(a&&b);
    				break;
  				case "?":
