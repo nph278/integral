@@ -6,7 +6,7 @@ common_patterns=["that","with","have","this","will","your","from","they","know",
       size = ~~size;
 return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 }
-	codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡ ≈°∙·√ⁿ²■";
+	codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡ ≈°∙·√ⁿ²■";
 
 	function decode(a) {
 		l = codestr.length;
@@ -368,17 +368,17 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
   					intmode = true;
    				break;
  				case "<":
-  					a = stack.pop();
+  					a = Number(stack.pop());
   					stack.push(Number(!a));
    				break;
  				case "=":
-  					b = stack.pop();
-  					a = stack.pop();
+  					b = Number(stack.pop());
+  					a = Number(stack.pop());
   					stack.push(a||b);
    				break;
  				case ">":
-  					b = stack.pop();
-  					a = stack.pop();
+  					b = Number(stack.pop());
+  					a = Number(stack.pop());
   					stack.push(a&&b);
    				break;
  				case "?":
