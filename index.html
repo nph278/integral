@@ -7,7 +7,7 @@
             background-color: white;
             font-family: Arial;
         }
-	pre{
+    pre{
       font-family: consolas;
     }
     textarea{
@@ -18,7 +18,7 @@
 </head>
 <body>
     <b><a href="https://github.com/nph278/integral">Integral</a> interpreter&nbsp;</b><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
-    <button onclick="outelm.value='https://nph278.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:double; background-color:#fff">Permalink</button>
+    <button onclick="outelm.value='https://nph278.github.io/integral/index.html?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:double; background-color:#fff">Permalink</button>
 <button onclick="postTemplate()" style="border:double; background-color:#fff">SE post template</button>
 
 <br>
@@ -67,7 +67,7 @@ document.getElementById("inelm").value=x;
 function postTemplate(){
     header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" Bytes\n\n";
     body = codelm.value;
-    outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://nph278.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n[Link to official interpreter(no permalink)](https://sites.google.com/view/integral-interpreter/home)\n\n";
+    outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://nph278.github.io/integral/index.html?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n[Link to official interpreter(no permalink)](https://sites.google.com/view/integral-interpreter/home)\n\n";
 }
 
 setInterval(function(){byteselm.innerHTML=codelm.innerHTML.length},10);
