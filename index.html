@@ -65,8 +65,12 @@ x = unescape(qstr("input"));
 document.getElementById("inelm").value=x;
 
 function postTemplate(){
-    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" bytes\n\n"
-    outelm.value=header+'https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)
+    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" Bytes\n\n";
+    body = codelm.split("\n");
+    for(i=0;i<body.length;i++){
+	 body[i]="    "+body[i];
+    }
+    outelm.value=header+code+'\nhttps://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value);
     
 }
 </script>
