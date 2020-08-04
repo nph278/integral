@@ -8,7 +8,7 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 }
 	codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡ ≈°∙·√ⁿ²■";
 
-	function decode(a) {
+	function Decode(a) {
 		l = codestr.length;
 		base = 1;
 		val = 0;
@@ -19,7 +19,7 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 		return val;
 	}
 
-	function encode(a) {
+	function Encode(a) {
 		if (a===0) {
 			return codestr[0];
 		}
@@ -103,12 +103,12 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
       }else if (intmode) {
 				if (t[i]===";") {
 					intmode = false;
-					stack.push(decode(str1));
+					stack.push(Decode(str1));
 					str1 = "";
 				} else if (i===t.length-1) {
 					str1+=t[i];
 					intmode = false;
-					stack.push(decode(str1));
+					stack.push(Decode(str1));
 					str1 = "";
 				} else {
 					str1+=t[i];
