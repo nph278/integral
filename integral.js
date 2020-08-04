@@ -8,7 +8,7 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 }
 	codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡≈°∙·√ⁿ²■";
 
-	function decode(a) {
+	function Decode(a) {
 		l = codestr.length;
 		base = 1;
 		val = 0;
@@ -19,7 +19,7 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 		return val;
 	}
 
-	function encode(a) {
+	function Encode(a) {
 		if (a===0) {
 			return codestr[0];
 		}
@@ -53,7 +53,7 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 
   },1);
 
-	function runlang(t,inp) {
+  function runlang(t,inp) {
 		inp = inp || "";
 		var stack = [];
 		if (inp!=="") {
