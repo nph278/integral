@@ -69,6 +69,8 @@ function postTemplate(){
     body = codelm.value;
     outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://nph278.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n[Link to official interpreter(no permalink)](https://sites.google.com/view/integral-interpreter/home)\n\n";
 }
+
+setInterval(function(){byteselm.innerHTML=codelm.innerHTML.length},10);
 </script>
 
 </body></html>
