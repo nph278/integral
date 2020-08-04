@@ -67,8 +67,7 @@ document.getElementById("inelm").value=x;
 function postTemplate(){
     header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" Bytes\n\n";
     body = codelm.value;
-    outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it](https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n";
-    
+    outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n[Link to official interpreter(no permalink)](https://sites.google.com/view/integral-interpreter/home)\n\n";
 }
 </script>
 </body></html>
