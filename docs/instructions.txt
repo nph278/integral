@@ -1,17 +1,16 @@
-NULL
-☺ POP
-☻ POP*2
-♥ POP*3
-♦ SWAP
-♣ *2
-♠ CYCLE ...abc->bac
-• CYCLE ...abc->bca
-◘ CYCLE ...abc->cab
-○ CYCLE ...abc->cba
-◙ DUPLICATE
-♂ TRIPLICATE
-♀ QUADRUPLICATE
-♪ REVERSE STACK
+☺           = pop a
+☻           = pop a,b
+♥           = pop a,b,c
+♦           = pop a,b           Push b,a
+♣           = pop a             Push a * 2
+♠           = pop a,b,c         Push b,a,c
+•           = pop a,b,c         Push b,c,a
+◘           = pop a,b,c         Push c,a,b
+○           = pop a,b,c         Push c,b,a
+◙           = pop a             Push a,a
+♂           = pop a             Push a,a,a
+♀           = pop a             Push a,a,a,a
+♪           =                   Reverse the main stack
 ♫ ...ab->...bbbbbb (a bs)
 ☼ ...ab->...aaaaaa (b as)
 
