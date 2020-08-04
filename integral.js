@@ -645,6 +645,18 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
         case "v":
         charmode=true;
           break;
+        case "w":
+            stack.push(16);
+          break;
+        case "x":
+            stack.push(32);
+          break;
+        case "y":
+            stack.push(64);
+          break;
+        case "z":
+            stack.push(128);
+          break;
 
 			}
 			}
