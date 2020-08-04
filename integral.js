@@ -63,6 +63,7 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 		}
     var stringmode = false;
     var encstringmode = false;
+    var charmode = false;
 		var intmode = false;
 		var str1 = "";
 		for (var i = 0; i < t.length; i++) {
@@ -114,6 +115,9 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 					str1+=t[i];
 				}
 
+			} else if (charmode) {
+				charmode = false;
+				stack.push(t[i]);
 			} else {
 				snack: switch(t[i]) {
   				case "☺":
@@ -637,6 +641,21 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
         case "u":
             a = stack.pop();
             stack.push(Math.round(a));
+          break;
+        case "v":
+        charmode=true;
+          break;
+        case "w":
+            stack.push(16);
+          break;
+        case "x":
+            stack.push(32);
+          break;
+        case "y":
+            stack.push(64);
+          break;
+        case "z":
+            stack.push(128);
           break;
 
 			}
