@@ -20,7 +20,7 @@
 	 <a href="https://github.com/nph278/integral">Integral</a> interpreter</h1>
     </center>
 <button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
-    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+codelm.value">Permalink</button><br>
+    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&input='+escape(inelm.value)">Permalink</button><br>
 
     <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px;"></textarea>
 
