@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html><head>
     <title>Integral Interpreter</title>
     <style type="text/css">
@@ -13,11 +12,14 @@
     textarea{
       font-family: consolas;
     }
+    input{
+        font-family: consolas;
+    }
     </style>
     <script type="text/javascript" src="integral.js"></script>
 </head>
 <body>
-    <b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter&nbsp;</b><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
+    <b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter&nbsp;</b><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">11</span> bytes)</button>
     <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:double; background-color:#fff">Permalink</button>
 <button onclick="postTemplate()" style="border:double; background-color:#fff">SE post template</button>
 
@@ -77,5 +79,6 @@ function postTemplate(){
 	stroutelm.value=stroutelm.value='÷'+encodestr(strelm.value)+'÷';
     },1);
 </script>
+
 
 </body></html>
