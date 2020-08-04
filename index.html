@@ -19,8 +19,9 @@
     <center><h1>
 	 <a href="https://github.com/nph278/integral">Integral</a> interpreter</h1>
     </center>
-<button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
-    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)">Permalink</button><br>
+<button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">4</span> bytes)</button>
+    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)">Permalink</button>
+<button onclick="postTemplate()">SE post template</button><br>
 
     <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px;"></textarea>
 
@@ -60,6 +61,11 @@ document.getElementById("codelm").value=x;
 
 x = unescape(qstr("input"));
 document.getElementById("inelm").value=x;
+
+function postTemplate(){
+    outelm.value='test-prepended:https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)
+    
+}
 </script>
 <script type="text/javascript" src="integral.js"></script>
 <script>
@@ -70,5 +76,6 @@ document.getElementById("inelm").value=x;
 
   },1);
 </script>
+
 
 </body></html>
