@@ -71,7 +71,7 @@ function postTemplate(){
 	 body[i]="    "+body[i];
     }
     body = body.join("\n");
-    outelm.value=header+body+'\nhttps://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value);
+    outelm.value=header+body+'\n\n[Try it](https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n";
     
 }
 </script>
