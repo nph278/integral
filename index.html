@@ -65,7 +65,7 @@ x = unescape(qstr("input"));
 document.getElementById("inelm").value=x;
 
 function postTemplate(){
-    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.value)+" bytes"
+    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" bytes\n\n"
     outelm.value=header+'https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)
     
 }
