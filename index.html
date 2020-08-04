@@ -48,6 +48,7 @@
     I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph">nph</a><br>
   <br>
 <script type="text/javascript">
+
 function qstr(qs) {
     var s = location.href.replace("?","?&").split("&")
     for(i=1;i<s.length;i++)
@@ -55,7 +56,8 @@ function qstr(qs) {
             return s[i].split("=")[1]
     return "";
 }
-	    var codelm=document.getElementById("codelm");
+var codelm=document.getElementById("codelm");
+var byteslm=document.getElementById("byteselm");
 var x = unescape(qstr("code"));
 document.getElementById("codelm").value=x;
 
@@ -63,7 +65,8 @@ x = unescape(qstr("input"));
 document.getElementById("inelm").value=x;
 
 function postTemplate(){
-    outelm.value='test-prepended:https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)
+    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.value)+" bytes"
+    outelm.value=header+'https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)
     
 }
 </script>
