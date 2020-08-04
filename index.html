@@ -30,23 +30,22 @@
     <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
     <textarea id="outelm" style="margin: 0px; width: 515px; height: 130px;" placeholder="output appears here"></textarea><br>
     <div style="align:left">
-    <h2>Encode Number</h2>
-    <input placeholder="integers here" type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
-    <input type="text" id="numoutelm"><br>
+    
+    <input placeholder="encode integers here" type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
+    <input placeholder="output here" type="text" id="numoutelm"><br>
         </div>
     <div style="align:right">
-    <h2>Encode String</h2>
-    <input placeholder="string here" type="text" id="strelm">
-    <input type="text" id="stroutelm">
+    
+    <input placeholder="encode string here" type="text" id="strelm">
+    <input placeholder="output here" type="text" id="stroutelm">
 </div>
 <br>
     <h2>About</h2>
 
     Integral is a stacked-based programming language that I came up with.<br>
-    It uses code page 437.<br>
+    It uses code page 437. <a href="table.html">(Instruction table)</a><br>
     I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph">nph</a><br>
   <br>
-	<h1><a href="table.html">Instruction table</a></h1>
 
 <script type="text/javascript" src="integral.js"></script>
 <script>
@@ -57,6 +56,5 @@
 
   },1);
 </script>
-
 
 </body></html>
