@@ -23,10 +23,11 @@ function qstr(qs) {
 }
 	    var codelm=document.getElementById("codelm");
 var x = qstr("code");
+console.log(x)
 if(x != undefined)
-    codelm.value=x;
+    document.getElementById("codelm").value=x;
 else
-    codelm.value="";
+    document.getElementById("codelm").value="";
 </script>
 </head>
 <body>
