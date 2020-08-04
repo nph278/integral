@@ -16,28 +16,25 @@
     </style>
 </head>
 <body>
-    <center><h1>
-	 <a href="https://github.com/nph278/integral">Integral</a> interpreter</h1>
-    </center>
-<button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
-    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)">Permalink</button>
-<button onclick="postTemplate()">SE post template</button><br>
+    <center><h2><a href="https://github.com/nph278/integral">Integral</a> interpreter</h2></center><button style="background-color:#FFFFFF;border:none" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
+    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="background-color:#FFFFFF;border:none">Permalink</button>
+<button onclick="postTemplate()" style="background-color:#FFFFFF;border:none">SE post template</button><br>
 
-    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px;"></textarea>
+    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px; border: #fff"></textarea>
 
 
     <br>
     
-    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
+    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px; border:#fff"></textarea>
     <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
     <div style="align:left">
     
-    <input placeholder="encode integers here" type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
+    <input placeholder="encode integers here" type="number" id="numelm" style="border:#fff" onchange="numoutelm.value=encode(Number(numelm.value))">
     <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
         </div>
     <div style="align:right">
     
-    <input placeholder="encode string here" type="text" id="strelm">
+    <input placeholder="encode string here" type="text" id="strelm" style="border:#fff">
     <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
 </div>
 <br>
@@ -80,5 +77,4 @@ function postTemplate(){
 
   },1);
 </script>
-
 </body></html>
