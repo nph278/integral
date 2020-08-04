@@ -20,21 +20,21 @@
     <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="background-color:#FFFFFF;border:none">Permalink</button>
 <button onclick="postTemplate()" style="background-color:#FFFFFF;border:none">SE post template</button><br>
 
-    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px; border: #fff"></textarea>
+    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px;"></textarea>
 
 
     <br>
     
-    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px; border:#fff"></textarea>
+    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
     <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
     <div style="align:left">
     
-    <input placeholder="encode integers here" type="number" id="numelm" style="border:#fff" onchange="numoutelm.value=encode(Number(numelm.value))">
+    <input placeholder="encode integers here" type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
     <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
         </div>
     <div style="align:right">
     
-    <input placeholder="encode string here" type="text" id="strelm" style="border:#fff">
+    <input placeholder="encode string here" type="text" id="strelm">
     <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
 </div>
 <br>
