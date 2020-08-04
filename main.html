@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
     <title>Integral Interpreter</title>
     <style type="text/css">
         html{
@@ -21,16 +20,15 @@
 	 <a href="https://github.com/nph278/integral">Integral</a> interpreter</h1>
     </center>
 
-    <h2>Code</h2>
-
-    <textarea id="codelm"></textarea>
-
-    <span id="byteselm">0</span> bytes.<br>
-
-    <button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run</button><br><br>
     
-    <h2>Input</h2><textarea id="inelm"></textarea><br>
-    <h2>Output</h2><textarea id="outelm"></textarea><br>
+
+    <textarea title="code" id="codelm" placeholder="Enter your code"></textarea>
+<br>
+
+    <button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button><br><br>
+    
+    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 42px; width: 518px;"></textarea><br>
+    <textarea id="outelm" style="margin: 0px; width: 419px; height: 141px;" placeholder="output appears here"></textarea><br>
     <h1>Encode Number (Positive Integers)</h1>
     <input type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
     <input type="text" id="numoutelm"><br>
@@ -46,7 +44,7 @@
   <br>
 	<h1><a href="table.html">Instruction table</a></h1>
 	<p>Generated with <a href="https://tio.run/##bVZpc9NWFP3c@ytu1dImZLGTsNdx6ySmpIQstkNYQ59kJRYYycgKW5ehlFIy5UOAOJCWlrCvXaAsU0inM2KmH81/8B9Jz5Xk1PXUM@e8c5d3331PehqXTngFx@5ZWVHcy5qmMQ@PDw2xUVCuMjzTbee8Y5bZdryCZU9T7cpLHh0ZxfhKxrXdVFu8HageqDucnUghuHiTg8gS9@/uH0pzZ2en0o2OpK4Mqp260ew1FNUuX2nyGkqH97tmry65izwwPjo02J/KpbHKac5lBv81T/HYeGog05DwgDPpnelMNs3ZXKp/OzwPw4IdSQx68OMWxXq5FRtbboip4MctOiuJLbzkNix/hjuodrbCa7GZZY6R/5zXkH@XJ5HxiPsGcx3DIzlk3Av0SAbyUiBTwwPQFwO9K/DPRenQ566FOkyaD5OCyMITbuvCsMwdXcQ8Op7dxl30dii6SeMeeofX0bu8ntbwBnqPN9L7vIlaeDO1clec1oLi1CYcp/ZgiFNHOMapMxJxitWVGHE2qYtLFnVzqWBRD2KTitaxmuym9WxCb@DsWCZHG7k0Uy7w0FbaFKrsKG0OlbxKtCXU7fQB6@a0ZcdMO8@mbTh5M8/2zGHddCnB8VgXy6n1Bgq7TgZCDuPDQMl5fRSlZSgVKgn3hWHx9odHEqeBcE0N7wye4vETJzVKR65UXz9cu3bv0Whrs6sh/ePmCg3ztkWxI8dMeX/swxoNRq6xiTRcfcM7NPqk2dWQvr25QsO8oeaV4xg2a7Qj8gdmQ6fDjf6GLke4XCpaHo3yQceyaQx32ilRJrBY22drlI20RrlIsUbjkWzXaCe75lHTLZs0AVUqKsPksufKd2DXqsM1p83jtDtcLKy7p25otLcuUXlfXaP0/qjp2vkljSZXjesaHeAEfcq9pDhJOid6yeBkL@GNOaqKJMuVTOWF1hSrztBu0VtpmvW6pVqpEKSwYmuKdbIaLIPNYtkM30U6iJ5cU@VZuS47tudgg8o4RIewcpKKXDTtaa9Ah9my89imzQUkk8OesopU4nLRMkw6wlOWW/awjstFFYgyTxUdxyWPDROZM@w6M3aejjIdYzrOdILpJNNnTJ8zfcH0JeNE6PW3wDJwH7gB3AKWgNvAXeAB8BC4B/wK/AI8As4A3wCzwB3gLPAUeA48AV4BfwB/AQvAVSYf9f2bAGrXTqP43xcRuA78DPwOvAQeAxeQhIV92D4K1M7PQWBV/08A3fqY5KMrH6sw4gsXhC4KXQLNnxbCTmqV60I3hBaEKkI3hWRG5bLQj0JXhX6QaXNhyfl5oadCj4QkYf6U0LKk/iR0Teh7IUmu3Be6I7QkNCckcyt3w5KVe0JBW3IClUWhK0LSeUU6rzwUeiDLSGD@vGzpnNAZocCUugvopConhRaqmPhGbOzrzdc4lGcYkV5FK1VUqaKvqmzkHJp@g@dUfSaGdDsr5/hYhDQ0e4vT@E56BdMOX1X5ZOLwl5rd0YXE3Wn4vEbO1y/@55NbnzCLrfi/yerYu/9ChBzfV3jG/hPZ1hL@DnQGV7ZFrnUrUQkzYSQ8pRfNZMJzgUJy0EbJGcOzHDsRgy2@iQIuKe66/HkInTFko8aU47KF28RqC721Wi8slJAGk1qbtTe@v01LxAJztWSiFIS6twSxUvI/ZeuVYmFrWuvKyj8">this</a> script</p>
-</body>
+
 <script type="text/javascript" src="integral.js"></script>
 <script>
 	
@@ -56,4 +54,5 @@
 
   },1);
 </script>
-</html>
+
+</body></html>
