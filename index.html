@@ -52,15 +52,14 @@ function qstr(qs) {
     for(i=1;i<s.length;i++)
         if(s[i].split("=")[0]==qs)
             return s[i].split("=")[1]
+    return "";
 }
 	    var codelm=document.getElementById("codelm");
 var x = unescape(qstr("code"));
-if(x != undefined)
-    document.getElementById("codelm").value=x;
+document.getElementById("codelm").value=x;
 
 x = unescape(qstr("input"));
-if(x != undefined)
-    document.getElementById("inelm").value=x;
+document.getElementById("inelm").value=x;
 </script>
 <script type="text/javascript" src="integral.js"></script>
 <script>
