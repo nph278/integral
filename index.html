@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html><head>
     <title>Integral Interpreter</title>
     <style type="text/css">
@@ -15,11 +16,29 @@
     input{
         font-family: consolas;
     }
-    </style>
+    .dropdown {
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  color:white;
+  padding: 3px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius: 6px;
+}</style>
     <script type="text/javascript" src="integral.js"></script>
 </head>
 <body>
-    <b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter&nbsp;</b><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">11</span> bytes)</button>
+    <div class="dropdown"><b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter </b>
+    <div class="dropdown-content">
+        Hello, World!
+    </div>
+</div><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
     <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:double; background-color:#fff">Permalink</button>
 <button onclick="postTemplate()" style="border:double; background-color:#fff">SE post template</button>
 
@@ -79,6 +98,7 @@ function postTemplate(){
 	stroutelm.value=stroutelm.value='÷'+encodestr(strelm.value)+'÷';
     },1);
 </script>
+
 
 
 </body></html>
