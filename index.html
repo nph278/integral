@@ -55,11 +55,16 @@ function qstr(qs) {
 }
 	    var codelm=document.getElementById("codelm");
 var x = qstr("code");
-console.log(x)
 if(x != undefined)
     document.getElementById("codelm").value=x;
 else
     document.getElementById("codelm").value="";
+
+x = qstr("input");
+if(x != undefined)
+    document.getElementById("inelm").value=x;
+else
+    document.gerElementById("inelm").value="";
 </script>
 <script type="text/javascript" src="integral.js"></script>
 <script>
