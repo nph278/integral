@@ -14,21 +14,6 @@
       font-family: consolas;
     }
     </style>
-    <script type="text/javascript">
-function qstr(qs) {
-    var s = location.href.replace("?","?&").split("&")
-    for(i=1;i<s.length;i++)
-        if(s[i].split("=")[0]==qs)
-            return s[i].split("=")[1]
-}
-	    var codelm=document.getElementById("codelm");
-var x = qstr("code");
-console.log(x)
-if(x != undefined)
-    document.getElementById("codelm").value=x;
-else
-    document.getElementById("codelm").value="";
-</script>
 </head>
 <body>
     <center><h1>
@@ -61,7 +46,21 @@ else
     It uses code page 437. <a href="table.html">(Instruction table)</a><br>
     I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph">nph</a><br>
   <br>
-
+<script type="text/javascript">
+function qstr(qs) {
+    var s = location.href.replace("?","?&").split("&")
+    for(i=1;i<s.length;i++)
+        if(s[i].split("=")[0]==qs)
+            return s[i].split("=")[1]
+}
+	    var codelm=document.getElementById("codelm");
+var x = qstr("code");
+console.log(x)
+if(x != undefined)
+    document.getElementById("codelm").value=x;
+else
+    document.getElementById("codelm").value="";
+</script>
 <script type="text/javascript" src="integral.js"></script>
 <script>
 	
