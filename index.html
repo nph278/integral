@@ -54,13 +54,13 @@ function qstr(qs) {
             return s[i].split("=")[1]
 }
 	    var codelm=document.getElementById("codelm");
-var x = qstr("code");
+var x = unescape(qstr("code"));
 if(x != undefined)
     document.getElementById("codelm").value=x;
 else
     document.getElementById("codelm").value="";
 
-x = qstr("input");
+x = unescape(qstr("input"));
 if(x != undefined)
     document.getElementById("inelm").value=x;
 else
