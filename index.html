@@ -1,80 +1,34 @@
 <!DOCTYPE html>
-<html><head>
-    <title>Integral Interpreter</title>
-    <style type="text/css">
-        html{
-            color: black;
-            background-color: white;
-            font-family: Arial;
-        }
-    pre{
-      font-family: consolas;
-    }
-        
-    textarea{
-      font-family: courier;
-    }
-    textarea{
-      font-family: consolas;
-    }
-    </style>
-    <script type="text/javascript" src="integral.js"></script>
+<html>
+<head>
+	<title>NPH278</title>
+	<style type="text/css">
+		html{
+			font-family: arial;
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
-    <b><a href="https://github.com/nph278/integral">Integral</a> interpreter&nbsp;</b><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
-    <button onclick="outelm.value='https://nph278.github.io/integral/index.html?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:double; background-color:#fff">Permalink</button>
-<button onclick="postTemplate()" style="border:double; background-color:#fff">SE post template</button>
+	<h1>Hello</h1><hr><br><br>
+	
 
-<br>
+	<h1>texttocpp</h1><hr>
+	A command-line tool that converts text to C++ files that print them.<br>
+	<h2><a href="https://github.com/nph278/texttocpp">GitHub repository</a></h2>
+	<br><br>
+	<h1>Integral</h1><hr>
+	A stack based programming language made for code golf.<br>
+	<a href="https://nph278.github.io/integral/index.html">Interpreter</a><br>
+	<a href="https://github.com/nph278/integral">GitHub repository</a><br><br>
+	<h2><a href="https://codegolf.stackexchange.com/users/95627/nph">My PPCG account</a></h2>
 
-    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px;" onchange="byteselm.innerHTML=codelm.innerHTML.length"></textarea>
 
 
-    <br>
-    
-    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
-    <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
-    <div style="align:left">
-    
-    <input placeholder="encode integers here" type="number" id="numelm" onchange="numoutelm.value=';'+encode(Number(numelm.value))+';'">
-    <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly><br>
-        </div>
-    <div style="align:right">
-    
-    <input placeholder="encode string here" type="text" id="strelm" onchange="stroutelm.value='÷'+encodestr(strelm.value)+'÷'">
-    <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
-</div>
-<br>
-    
+	<br><br>
 
-    Integral is a stacked-based programming language that I came up with.
-    It uses code page 437. <a href="table.html">(Instruction table)</a><br>
-    I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph">nph</a>
-  
-<script type="text/javascript">
-
-function qstr(qs) {
-    var s = location.href.replace("?","?&").split("&")
-    for(i=1;i<s.length;i++)
-        if(s[i].split("=")[0]==qs)
-            return s[i].split("=")[1]
-    return "";
-}
-var codelm=document.getElementById("codelm");
-var byteslm=document.getElementById("byteselm");
-var x = unescape(qstr("code"));
-document.getElementById("codelm").value=x;
-
-x = unescape(qstr("input"));
-document.getElementById("inelm").value=x;
-
-function postTemplate(){
-    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" Bytes\n\n";
-    body = codelm.value;
-    outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://nph278.github.io/integral/index.html?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n[Link to official interpreter(no permalink)](https://sites.google.com/view/integral-interpreter/home)\n\n";
-}
-
-setInterval(function(){byteselm.innerHTML=codelm.innerHTML.length},10);
-</script>
-
-</body></html>
+	<a href="space.html">Go to space</a>
+</body>
+</html>
