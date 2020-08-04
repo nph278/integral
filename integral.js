@@ -48,10 +48,6 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
     }
     return a;
   }
-  setInterval(function() {byteselm.innerHTML=codelm.value.length;
-    numoutelm.value=encode(Number(numelm.value));stroutelm.value=encodestr(strelm.value);
-
-  },1);
 
   function runlang(t,inp) {
 		inp = inp || "";
