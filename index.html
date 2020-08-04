@@ -19,7 +19,7 @@
     <center><h1>
 	 <a href="https://github.com/nph278/integral">Integral</a> interpreter</h1>
     </center>
-<button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">4</span> bytes)</button>
+<button onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
     <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)">Permalink</button>
 <button onclick="postTemplate()">SE post template</button><br>
 
@@ -29,16 +29,16 @@
     <br>
     
     <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
-    <textarea id="outelm" style="margin: 0px; width: 515px; height: 130px;" placeholder="output appears here"></textarea><br>
+    <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
     <div style="align:left">
     
     <input placeholder="encode integers here" type="number" id="numelm" onchange="numoutelm.value=encode(Number(numelm.value))">
-    <input placeholder="output here" type="text" id="numoutelm"><br>
+    <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
         </div>
     <div style="align:right">
     
     <input placeholder="encode string here" type="text" id="strelm">
-    <input placeholder="output here" type="text" id="stroutelm">
+    <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
 </div>
 <br>
     
@@ -80,6 +80,5 @@ function postTemplate(){
 
   },1);
 </script>
-
 
 </body></html>
