@@ -32,12 +32,12 @@
     <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
     <div style="align:left">
     
-    <input placeholder="encode integers here" type="number" id="numelm" onchange="';'+encode(Number(numelm.value))+';'">
+    <input placeholder="encode integers here" type="number" id="numelm" onchange="numoutelm.value=';'+encode(Number(numelm.value))+';'">
     <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
         </div>
     <div style="align:right">
     
-    <input placeholder="encode string here" type="text" id="strelm" onchange="stroutelm.value='÷'">
+    <input placeholder="encode string here" type="text" id="strelm" onchange="stroutelm.value='÷'+encodestr(strelm.value)+'÷'">
     <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
 </div>
 <br>
