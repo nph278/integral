@@ -119,11 +119,11 @@ r last b
 s floor
 t ceil
 u round
-v 
-w 
-x 
-y 
-z 
+v push next char
+w 16
+x 32
+y 64
+z 128
 { 
 | 
 } 
