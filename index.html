@@ -21,11 +21,12 @@ function qstr(qs) {
         if(s[i].split("=")[0]==qs)
             return s[i].split("=")[1]
 }
+	    var codelm=document.getElementById("codelm");
 var x = qstr("code");
 if(x != undefined)
     codelm.value=x;
 else
-    codeln.value="";
+    codelm.value="";
 </script>
 </head>
 <body>
