@@ -1,100 +1,104 @@
 <!DOCTYPE html>
-<html><head>
-    <title>Integral Interpreter</title>
-    <style type="text/css">
-        html{
-            color: black;
-            background-color: white;
-            font-family: Arial;
-        }
-	pre{
-      font-family: consolas;
-    }
-    textarea{
-      font-family: consolas;
-    }
-    input{
-        font-family: consolas;
-    }
-    .dropdown {
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  color:black;
-  border:1px solid;
-  padding: 3px 16px;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-  border-radius: 6px;
-}</style>
-    <script type="text/javascript" src="integral.js"></script>
-</head>
-<body>
-    <div class="dropdown"><b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter </b>
-    <div class="dropdown-content">Integral is a stacked-based programming language that I came up with.
-    It uses code page 437. <br>
-    I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank">nph</a></div>
-</div>
+<html>
+    <head>
+        <title>Integral Interpreter</title>
+        <style type="text/css">
+            html{
+                color: black;
+                background-color: white;
+                font-family: Arial;
+                filter: invert(100%);
+            }
+            pre{
+                font-family: consolas;
+            }
+            textarea{
+                font-family: consolas;
+            }
+            input{
+                font-family: consolas;
+            }
+            .dropdown {
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+            .dropdown-content {
+                 display: none;
+                 position: absolute;
+                 background-color: white;
+                 color:black;
+                 border:1px solid;
+                 padding: 3px 16px;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+                border-radius: 6px;
+            }
+	</style>
+        <script type="text/javascript" src="integral.js"></script>
+    </head>
+    <body>
+        <div class="dropdown">
+            <b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter </b>
+            <div class="dropdown-content">
+		Integral is a stacked-based programming language that I came up with. It uses code page 437. <br>
 
-<i><a href="table.html" target="_blank">(Instruction table)</a></i><button style="border:1px solid; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">22</span> bytes)</button>
-    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:1px solid; background-color:#fff">Permalink</button>
-<button onclick="postTemplate()" style="border:1px solid; background-color:#fff">SE post template</button>
-
-<br>
-
-    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1045px; height: 109px;"></textarea>
-
-
-    <br>
-    
-    <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
-    <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
-    <div style="align:left">
-    
-    <input placeholder="encode integers here" type="number" id="numelm">
-    <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
+                I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank">nph</a>
+            </div>
         </div>
-    <div style="align:right">
-    
-    <input placeholder="encode string here" type="text" id="strelm">
-    <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
-</div>
-<br>
-  
-<script type="text/javascript">
 
-function qstr(qs) {
-    var s = location.href.replace("?","?&").split("&")
-    for(i=1;i<s.length;i++)
-        if(s[i].split("=")[0]==qs)
-            return s[i].split("=")[1]
-    return "";
-}
-var codelm=document.getElementById("codelm");
-var byteslm=document.getElementById("byteselm");
-var x = unescape(qstr("code"));
-document.getElementById("codelm").value=x;
+        <i><a href="table.html" target="_blank">(Instruction table)</a></i>
 
-x = unescape(qstr("input"));
-document.getElementById("inelm").value=x;
+        <button style="border:1px solid; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">12</span> bytes)</button>
+        <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:1px solid; background-color:#fff">Permalink</button>
+        <button onclick="postTemplate()" style="border:1px solid; background-color:#fff">SE post template</button><br>
 
-function postTemplate(){
-    header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" Bytes\n\n";
-    body = codelm.value;
-    outelm.value=header+'<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n";
-}
-</script>
-<script type="text/javascript">
-    setInterval(function() {
-	byteselm.innerHTML=codelm.value.length;
-        numoutelm.value=numoutelm.value=';'+encode(Number(numelm.value))+';';
-	stroutelm.value=stroutelm.value='÷'+encodestr(strelm.value)+'÷';
-    },1);
-</script>
+        <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1045px; height: 109px;"></textarea><br>
 
-</body></html>
+        <textarea id="inelm" placeholder="Enter inputs, newline separated" style="margin: 0px; height: 131px; width: 512px;"></textarea>
+        <textarea id="outelm" style="margin: 0px; border:#fff; width: 515px; height: 130px;" placeholder="output appears here" readonly="" margin:0=""></textarea><br>
+
+        <div style="align:left">
+            <input placeholder="encode integers here" type="number" id="numelm">
+            <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
+        </div>
+
+        <div style="align:right">
+            <input placeholder="encode string here" type="text" id="strelm">
+            <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
+        </div><br>
+
+        <script type="text/javascript">
+            function qstr(qs) {
+                var s = location.href.replace("?","?&").split("&");
+                for(i = 1; i < s.length; i++)
+                    if(s[i].split("=")[0] == qs)
+                        return s[i].split("=")[1];
+                return "";
+            }
+
+            var codelm=document.getElementById("codelm");
+            var byteslm=document.getElementById("byteselm");
+            var x = unescape(qstr("code"));
+
+            document.getElementById("codelm").value=x;
+
+            x = unescape(qstr("input"));
+            document.getElementById("inelm").value=x;
+
+            function postTemplate(){
+                var header = "# [Integral](https://github.com/nph278/integral), "+(byteselm.innerHTML)+" Bytes\n\n";
+                var body = codelm.value;
+                outelm.value = header + '<pre>\n'+body+'\n</pre>'+'\n\n[Try it!](https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)+")\n\n";
+            }
+       </script>
+
+       <script type="text/javascript">
+           setInterval(function() {
+               byteselm.innerHTML=codelm.value.length;
+               numoutelm.value=numoutelm.value=';'+encode(Number(numelm.value))+';';
+               stroutelm.value=stroutelm.value='÷'+encodestr(strelm.value)+'÷';
+           }, 1);
+       </script>
+    </body>
+</html>
