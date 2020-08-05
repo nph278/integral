@@ -1,4 +1,4 @@
-NULL
+× NULL character, does nothing
 ☺ POP
 ☻ POP*2
 ♥ POP*3
@@ -14,7 +14,6 @@ NULL
 ♪ REVERSE STACK
 ♫ ...ab->...bbbbbb (a bs)
 ☼ ...ab->...aaaaaa (b as)
-
 ► +
 ◄ -
 ↕ *
@@ -23,6 +22,7 @@ NULL
 § ^
 ▬ BIT-NOT
 ↨ BIT-OR
+↑ 
 ↓ BIT-AND
 → BIT-XOR
 ← BIT-NOR
@@ -30,10 +30,11 @@ NULL
 ↔ BIT-XNOR
 ▲ +1
 ▼ -1
-
-SP  PUSH 1
+  Space character, PUSH 1
 ! PUSH 2
 " 3
+"
+"
 # 4
 $ 5
 % 6
@@ -47,7 +48,6 @@ $ 5
 - 100000
 . 1000000
 / 1000000000
-
 0 e
 1 pi
 2 phi
@@ -64,7 +64,6 @@ $ 5
 = 0/1 OR
 > 0/1 AND
 ? 0/1 XOR
-
 @ 0/1 NOR
 A 0/1 NAND
 B 0/1 XNOR
@@ -83,18 +82,19 @@ N push "0...9ABC...XYZ"
 O split
 P join
 Q chop
-R join "\n"
+R join "
 S join ""
 T join " "
 U join ","
 V reverse
 W replace string
 X replace regex
-Y split "\n"
+Y split "
 Z split ""
 [ split " "
 \ split ","
 ] push "⌠"
+] 
 ^ push "⌡"
 _ <
 ` =
@@ -128,8 +128,7 @@ z 128
 | 
 } 
 ~ 
-] 
-  
+⌂ 
 Ç 
 ü 
 é 
@@ -146,7 +145,6 @@ z 128
 ì 
 Ä 
 Å 
-  
 É 
 æ 
 Æ 
@@ -163,7 +161,6 @@ z 128
 ¥ 
 ₧ 
 ƒ 
-  
 á 
 í 
 ó 
@@ -180,7 +177,6 @@ z 128
 ¡ 
 « 
 » 
-  
 ░ 
 ▒ 
 ▓ 
@@ -197,7 +193,6 @@ z 128
 ╜ 
 ╛ 
 ┐ 
-  
 └ 
 ┴ 
 ┬ 
@@ -214,7 +209,6 @@ z 128
 ═ 
 ╬ 
 ╧ 
-  
 ╨ 
 ╤ 
 ╥ 
@@ -231,7 +225,6 @@ z 128
 ▌ 
 ▐ 
 ▀ 
-  
 α 
 ß 
 Γ 
@@ -248,7 +241,6 @@ z 128
 φ 
 ε 
 ∩ 
-  
 ≡ 
 ± 
 ≥ 
@@ -263,4 +255,5 @@ z 128
 √ 
 ⁿ 
 ² 
-■
+■ 
+Þ 
