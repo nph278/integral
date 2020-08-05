@@ -44,48 +44,56 @@ codestr   = "×☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬�
             "üéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞" +
             "╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■Þ"
 
-	function decode(a) {
-		l = codestr.length;
-		base = 1;
-		val = 0;
-		for (var i = 0; i < a.length; i++) {
-			val += base*codestr.indexOf(a[i]);
-			base *= l;
-		}
-		return val;
+function decode(a) {
+	l = codestr.length;
+	base = 1;
+	val = 0;
+	for (var i = 0; i < a.length; i++) {
+		val += base*codestr.indexOf(a[i]);
+		base *= l;
 	}
+	return val;
+}
 
-	function encode(a) {
-		if (a===0) {
-			return codestr[0];
-		}
-		b=a;
-		l = codestr.length;
-		base = 1;
-		str = "";
-		while(base <= a){
-			str += codestr[b%l];
-			b = Math.floor(b/l);
-			base *= l;
-		}
-		return str;
+function encode(a) {
+	if (a===0) {
+		return codestr[0];
 	}
+	b=a;
+	l = codestr.length;
+	base = 1;
+	str = "";
+	while(base <= a){
+		str += codestr[b%l];
+		b = Math.floor(b/l);
+		base *= l;
+	}
+	return str;
+}
 
-  function decodestr(a) {
+function decodestr(a) {
     for (var i = 119; i < codestr.length; i++) {
       a=a.split(codestr[i]).join(common_patterns[i-119]);
     }
     return a;
-  }
+}
 
-  function encodestr(a) {
+function encodestr(a) {
     for (var i = 0; i < common_patterns.length; i++) {
       a=a.split(common_patterns[i]).join(codestr[i+119]);
     }
     return a;
-  }
+}
 
-  function runlang(t,inp) {
+function encodeLink(a) {
+	return btoa(a.split``.map(i=>String.fromCharCode(codestr.indexOf(i))).join``).replace(/=+$/,'')
+}
+
+function decodeLink(a) {
+	return atob(a).split``.map(i=>codestr[i.charCodeAt(0)]).join``
+}
+
+function runlang(t,inp) {
 		inp = inp || "";
 		var stack = [];
 		if (inp!=="") {
