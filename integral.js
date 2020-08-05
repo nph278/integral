@@ -24,14 +24,37 @@ common_patterns = ["that","with","have","this","will",
 		   "k "  ," l"  ,"l "  ," z"  ,"z "  ,
 		   " x"  ,"x "  ," c"  ,"c "  ," v"  ,
 		   "v "  ," b"  ,"b "  ," n"  ,"n "  ,
-		   " m"  ,"m "  ]
-  string_chop =  function(str, size){
-      if (str == null) return [];
-      str = String(str);
-      size = ~~size;
-return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
+		   " m"  ,"m "  ];
+
+string_chop = function(str, size) {
+    if (str == null)
+        return [];
+
+    str = String(str);
+    size = ~~size;
+
+    if(size > 0)
+        return str.match(new RegExp('.{1,' + size + '}', 'g'));
+
+    return [str];
 }
-	codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡≈°∙·√ⁿ²■";
+
+codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►"   +
+          "◄↕‼¶§▬↨↓→←∟↔▲▼!\""  +
+          "#$%&'()*+,-./012"   +
+          "3456789:<=>?@ABC"   +
+          "DEFGHIJKLMNOPQRS"   +
+          "TUVWXYZ[\\]^_`ab"   +
+          "cdefghijklmnopqr"   +
+          "stuvwxyz{|}~]Çüé"   +
+          "âäàåçêëèïîìÄÅÉæÆ"   +
+          "ôöòûùÿÖÜ¢£¥₧ƒáíó"   +
+          "úñÑªº¿⌐¬½¼¡«»░▒▓"   +
+          "│┤╡╢╖╕╣║╗╝╜╛┐└┴┬"   +
+          "├─┼╞╟╚╔╩╦╠═╬╧╨╤╥"   +
+          "╙╘╒╓╫╪┘┌█▄▌▐▀αßΓ"   +
+          "πΣσµτΦΘΩδ∞φε∩≡±≥"   +
+          "≤⌠⌡≈°∙·√ⁿ²■";
 
 	function decode(a) {
 		l = codestr.length;
