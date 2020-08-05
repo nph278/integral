@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="html-style" style="color: black; background-color: white; font-family: Arial; filter: invert(0%);"><head>
+<html id="html-style" style="color: black; background-color: white; font-family: Arial; filter: invert(100%);"><head>
         <title>Integral Interpreter</title>
         <style type="text/css" color="white" margin-top="1px">
             pre{
@@ -134,8 +134,7 @@
                byteselm.innerHTML = codelm.value.length;
                numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
                stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
-               light_or_dark.innerHTML = document.getElementById("html-style").style.filter == 'invert(100%)' ? 'Dark' : 'Light';
+               light_or_dark.innerHTML = document.getElementById("html-style").style.filter == 'invert(100%)' ? 'Light' : 'Dark';
            }, 1);
        </script>
-
 </body></html>
