@@ -23,8 +23,9 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
-  color:white;
+  background-color: white;
+  color:black;
+  border:1px solid;
   padding: 3px 16px;
 }
 .dropdown:hover .dropdown-content {
@@ -37,16 +38,16 @@
     <div class="dropdown"><b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter </b>
     <div class="dropdown-content">Integral is a stacked-based programming language that I came up with.
     It uses code page 437. <br>
-    I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank" style="color:blue">nph</a></div>
+    I am PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank">nph</a></div>
 </div>
 
-<i><a href="table.html" target="_blank">(Instruction table)</a></i><button style="border:double; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">0</span> bytes)</button>
-    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:double; background-color:#fff">Permalink</button>
-<button onclick="postTemplate()" style="border:double; background-color:#fff">SE post template</button>
+<i><a href="table.html" target="_blank">(Instruction table)</a></i><button style="border:1px solid; background-color:#fff" onclick="outelm.value=runlang(codelm.value,inelm.value)">Run (<span id="byteselm">22</span> bytes)</button>
+    <button onclick="outelm.value='https://a-ee.github.io/integral/?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value)" style="border:1px solid; background-color:#fff">Permalink</button>
+<button onclick="postTemplate()" style="border:1px solid; background-color:#fff">SE post template</button>
 
 <br>
 
-    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1037px; height: 138px;"></textarea>
+    <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px; width: 1045px; height: 109px;"></textarea>
 
 
     <br>
