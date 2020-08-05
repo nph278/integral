@@ -103,6 +103,8 @@
             x = unescape(qstr("input"));
             document.getElementById("inelm").value  = x;
 
+            document.getElementById("inelm").value  = runlang(codelm.value, inelm.value);
+
             function postTemplate(){
                 var header = "# [Integral](https://github.com/nph278/integral), " +
                              byteselm.innerHTML                                   +
