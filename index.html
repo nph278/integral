@@ -94,6 +94,7 @@ function postTemplate(){
 	byteselm.innerHTML=codelm.value.length;
         numoutelm.value=numoutelm.value=';'+encode(Number(numelm.value))+';';
 	stroutelm.value=stroutelm.value='÷'+encodestr(strelm.value)+'÷';
+	window.location.href=window.location.host+window.location.pathname+'?code='+escape(codelm.value)+'&amp;input='+escape(inelm.value);
     },1);
 </script>
 
