@@ -1,55 +1,99 @@
-common_patterns = ["that","with","have","this","will","your","from","they","know","want","much","the","and","for","are","but","not","you","all","any","can","had","her","was","one","our","out","day","get","has","him","his","how","man","new","now","old","see","two","way","who","boy","did","its","let","put","say","she","too","use","th","er","on","an","re","he","in","ed","nd","ha","at","en","es","of","or","nt","ea","ti","to","it","st","io","le","is","ou","ar","as","de","rt","ve"," q","q "," w","w "," e","e "," r","r "," t","t "," y","y "," u","u "," i","i "," o","o "," p","p "," a","a "," s","s "," d","d "," f","f "," g","g "," h","h "," j","j "," k","k "," l","l "," z","z "," x","x "," c","c "," v","v "," b","b "," n","n "," m","m "]
+common_patterns = ["that","with","have","this","will",
+		   "your","from","they","know","want",
+		   "much","the" ,"and" ,"for" ,"are" ,
+		   "but" ,"not" ,"you" ,"all" ,"any" ,
+		   "can" ,"had" ,"her" ,"was" ,"one" ,
+		   "our" ,"out" ,"day" ,"get" ,"has" ,
+		   "him" ,"his" ,"how" ,"man" ,"new" ,
+		   "now" ,"old" ,"see" ,"two" ,"way" ,
+		   "who" ,"boy" ,"did" ,"its" ,"let" ,
+		   "put" ,"say" ,"she" ,"too" ,"use" ,
+		   "th"  ,"er"  ,"on"  ,"an"  ,"re"  ,
+		   "he"  ,"in"  ,"ed"  ,"nd"  ,"ha"  ,
+		   "at"  ,"en"  ,"es"  ,"of"  ,"or"  ,
+		   "nt"  ,"ea"  ,"ti"  ,"to"  ,"it"  ,
+		   "st"  ,"io"  ,"le"  ,"is"  ,"ou"  ,
+		   "ar"  ,"as"  ,"de"  ,"rt"  ,"ve"  ,
+		   " q"  ,"q "  ," w"  ,"w "  ," e"  ,
+		   "e "  ," r"  ,"r "  ," t"  ,"t "  ,
+		   " y"  ,"y "  ," u"  ,"u "  ," i"  ,
+		   "i "  ," o"  ,"o "  ," p"  ,"p "  ,
+		   " a"  ,"a "  ," s"  ,"s "  ," d"  ,
+		   "d "  ," f"  ,"f "  ," g"  ,"g "  ,
+		   " h"  ,"h "  ," j"  ,"j "  ," k"  ,
+		   "k "  ," l"  ,"l "  ," z"  ,"z "  ,
+		   " x"  ,"x "  ," c"  ,"c "  ," v"  ,
+		   "v "  ," b"  ,"b "  ," n"  ,"n "  ,
+		   " m"  ,"m "  ];
 
-  string_chop =  function(str, size){
-      if (str == null) return [];
-      str = String(str);
-      size = ~~size;
-return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
+string_chop = function(str, size) {
+    if (str == null)
+        return [];
+
+    str = String(str);
+    size = ~~size;
+
+    if(size > 0)
+        return str.match(new RegExp('.{1,' + size + '}', 'g'));
+
+    return [str];
 }
-	codestr = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡≈°∙·√ⁿ²■";
 
-	function decode(a) {
-		l = codestr.length;
-		base = 1;
-		val = 0;
-		for (var i = 0; i < a.length; i++) {
-			val += base*codestr.indexOf(a[i]);
-			base *= l;
-		}
-		return val;
+codestr   = "×☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↑↓→←∟↔▲▼ !\"#$%&'()*+,-./0123456789:;"          +
+	    "<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~⌂Ç" +
+            "üéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞" +
+            "╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■Þ"
+
+function decode(a) {
+	l = codestr.length;
+	base = 1;
+	val = 0;
+	for (var i = 0; i < a.length; i++) {
+		val += base*codestr.indexOf(a[i]);
+		base *= l;
 	}
+	return val;
+}
 
-	function encode(a) {
-		if (a===0) {
-			return codestr[0];
-		}
-		b=a;
-		l = codestr.length;
-		base = 1;
-		str = "";
-		while(base <= a){
-			str += codestr[b%l];
-			b = Math.floor(b/l);
-			base *= l;
-		}
-		return str;
+function encode(a) {
+	if (a===0) {
+		return codestr[0];
 	}
+	b=a;
+	l = codestr.length;
+	base = 1;
+	str = "";
+	while(base <= a){
+		str += codestr[b%l];
+		b = Math.floor(b/l);
+		base *= l;
+	}
+	return str;
+}
 
-  function decodestr(a) {
+function decodestr(a) {
     for (var i = 119; i < codestr.length; i++) {
       a=a.split(codestr[i]).join(common_patterns[i-119]);
     }
     return a;
-  }
+}
 
-  function encodestr(a) {
+function encodestr(a) {
     for (var i = 0; i < common_patterns.length; i++) {
       a=a.split(common_patterns[i]).join(codestr[i+119]);
     }
     return a;
-  }
+}
 
-  function runlang(t,inp) {
+function encodeLink(a) {
+	return btoa(a.split``.map(i=>String.fromCharCode(codestr.indexOf(i))).join``).replace(/=+$/,'')
+}
+
+function decodeLink(a) {
+	return atob(a).split``.map(i=>codestr[i.charCodeAt(0)]).join``
+}
+
+function runlang(t,inp) {
 		inp = inp || "";
 		var stack = [];
 		if (inp!=="") {
