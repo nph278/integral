@@ -45,15 +45,7 @@
              Run (<span id="byteselm">8</span> bytes)
         </button>
 
-        <button onclick="outelm.value = '[`'                                              +
-			                codelm.value                                      +
-			                '` ('                                             +
-			                byteselm.value                                    +
-			                ' bytes)](https://a-ee.github.io/integral/?code=' +
-			                escape(codelm.value)                              +
-			                '&amp;input='                                     +
-			                escape(inelm.value)                               +
-			                ')'" style="border:1px solid; background-color:#fff">
+        <button onclick="permaLink()" style="border:1px solid; background-color:#fff">
              Permalink
         </button>
 
@@ -124,6 +116,18 @@
                                escape(codelm.value)                                   +
                                '&amp;input='                                          +
                                escape(inelm.value)+")\n\n";
+            }
+
+            function permaLink(){
+                outelm.value = '[`'                                              +
+			       codelm.value                                      +
+			       '` ('                                             +
+			       byteselm.value                                    +
+			       ' bytes)](https://a-ee.github.io/integral/?code=' +
+			       escape(codelm.value)                              +
+			       '&amp;input='                                     +
+			       escape(inelm.value)                               +
+			       ')'
             }
 
             function switchColor() {
