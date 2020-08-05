@@ -45,10 +45,13 @@
              Run (<span id="byteselm">8</span> bytes)
         </button>
 
-        <button onclick="outelm.value = '(https://a-ee.github.io/integral/?code=' +
-			                escape(codelm.value)                     +
-			                '&amp;input='                            +
-			                escape(inelm.value)" style="border:1px solid; background-color:#fff">
+        <button onclick="outelm.value = '[`'                                        +
+			                codelm.value                                +
+			                '`](https://a-ee.github.io/integral/?code=' +
+			                escape(codelm.value)                        +
+			                '&amp;input='                               +
+			                escape(inelm.value)                         +
+			                ')'" style="border:1px solid; background-color:#fff">
              Permalink
         </button>
 
