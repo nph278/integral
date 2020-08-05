@@ -1,5 +1,30 @@
-common_patterns = ["that","with","have","this","will","your","from","they","know","want","much","the","and","for","are","but","not","you","all","any","can","had","her","was","one","our","out","day","get","has","him","his","how","man","new","now","old","see","two","way","who","boy","did","its","let","put","say","she","too","use","th","er","on","an","re","he","in","ed","nd","ha","at","en","es","of","or","nt","ea","ti","to","it","st","io","le","is","ou","ar","as","de","rt","ve"," q","q "," w","w "," e","e "," r","r "," t","t "," y","y "," u","u "," i","i "," o","o "," p","p "," a","a "," s","s "," d","d "," f","f "," g","g "," h","h "," j","j "," k","k "," l","l "," z","z "," x","x "," c","c "," v","v "," b","b "," n","n "," m","m "]
-
+common_patterns = ["that","with","have","this","will",
+		   "your","from","they","know","want",
+		   "much","the" ,"and" ,"for" ,"are" ,
+		   "but" ,"not" ,"you" ,"all" ,"any" ,
+		   "can" ,"had" ,"her" ,"was" ,"one" ,
+		   "our" ,"out" ,"day" ,"get" ,"has" ,
+		   "him" ,"his" ,"how" ,"man" ,"new" ,
+		   "now" ,"old" ,"see" ,"two" ,"way" ,
+		   "who" ,"boy" ,"did" ,"its" ,"let" ,
+		   "put" ,"say" ,"she" ,"too" ,"use" ,
+		   "th"  ,"er"  ,"on"  ,"an"  ,"re"  ,
+		   "he"  ,"in"  ,"ed"  ,"nd"  ,"ha"  ,
+		   "at"  ,"en"  ,"es"  ,"of"  ,"or"  ,
+		   "nt"  ,"ea"  ,"ti"  ,"to"  ,"it"  ,
+		   "st"  ,"io"  ,"le"  ,"is"  ,"ou"  ,
+		   "ar"  ,"as"  ,"de"  ,"rt"  ,"ve"  ,
+		   " q"  ,"q "  ," w"  ,"w "  ," e"  ,
+		   "e "  ," r"  ,"r "  ," t"  ,"t "  ,
+		   " y"  ,"y "  ," u"  ,"u "  ," i"  ,
+		   "i "  ," o"  ,"o "  ," p"  ,"p "  ,
+		   " a"  ,"a "  ," s"  ,"s "  ," d"  ,
+		   "d "  ," f"  ,"f "  ," g"  ,"g "  ,
+		   " h"  ,"h "  ," j"  ,"j "  ," k"  ,
+		   "k "  ," l"  ,"l "  ," z"  ,"z "  ,
+		   " x"  ,"x "  ," c"  ,"c "  ," v"  ,
+		   "v "  ," b"  ,"b "  ," n"  ,"n "  ,
+		   " m"  ,"m "  ]
   string_chop =  function(str, size){
       if (str == null) return [];
       str = String(str);
