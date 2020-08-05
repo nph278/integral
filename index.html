@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<html id="html-style"
-      style="color: black;
-             background-color: white;
-             font-family: Arial;
-             filter: invert(0%);">
+<html id="html-style" style="color: black; background-color: white; font-family: Arial; filter: invert(0%);">
     <head>
         <title>Integral Interpreter</title>
         <style type="text/css" color="white" margin-top="1px">
@@ -63,6 +59,10 @@
 
         <button onclick="postTemplate()" style="border:1px solid; background-color:#fff">
              SE post template
+        </button>
+
+        <button onclick="switchColor()" style="border:1px solid; background-color:#fff">
+             Light mode
         </button><br>
 
         <textarea title="code" id="codelm" placeholder="Enter your code" style="margin: 0px;
@@ -122,6 +122,11 @@
                                escape(codelm.value)                                   +
                                '&amp;input='                                          +
                                escape(inelm.value)+")\n\n";
+            }
+
+            function switchColor() {
+                var x = document.getElementById("html-style").style;
+                x.setProperty('filter', 'invert(' + ((x.filter == "invert(100%)") ? "0%" : "100%") + ")");
             }
        </script>
 
