@@ -93,11 +93,11 @@
 
             var codelm  = document.getElementById("codelm");
             var byteslm = document.getElementById("byteselm");
-            var x       = unescape(qstr("code"));
+            var x       = decodeLink(qstr("code"));
 
             document.getElementById("codelm").value = x;
 
-            x = unescape(qstr("input"));
+            x = decodeLink(qstr("input"));
             document.getElementById("inelm").value  = x;
 
             document.getElementById("outelm").value  = runlang(codelm.value, inelm.value);
@@ -113,9 +113,9 @@
                                body                                                   +
                                '\n</pre>'                                             +
                                '\n\n[Try it!](https://a-ee.github.io/integral/?code=' +
-                               escape(codelm.value)                                   +
+                               encodeLink(codelm.value)                               +
                                '&input='                                              +
-                               escape(inelm.value)+")\n\n";
+                               encodeLink(inelm.value)+")\n\n";
             }
 
             function permaLink(){
@@ -124,9 +124,9 @@
 			       '` ('                                             +
 			       byteselm.innerHTML                                +
 			       ' bytes)](https://a-ee.github.io/integral/?code=' +
-			       escape(codelm.value)                              +
+			       encodeLink(codelm.value)                          +
 			       '&input='                                         +
-			       escape(inelm.value)                               +
+			       encodeLink(inelm.value)                           +
 			       ')'
             }
 
