@@ -44,6 +44,8 @@ codestr   = "×☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬�
             "üéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞" +
             "╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■Þ"
 
+codestr2  = "☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↓→←∟↔▲▼!\"#$%&'()*+,-./0123456789:<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~]ÇüéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡ ≈°∙·√ⁿ²■";
+
 function decode(a) {
 	l = codestr.length;
 	base = 1;
@@ -72,15 +74,15 @@ function encode(a) {
 }
 
 function decodestr(a) {
-    for (var i = 119; i < codestr.length; i++) {
-      a=a.split(codestr[i]).join(common_patterns[i-119]);
+    for (var i = 119; i < codestr2.length; i++) {
+      a=a.split(codestr2[i]).join(common_patterns[i-119]);
     }
     return a;
 }
 
 function encodestr(a) {
     for (var i = 0; i < common_patterns.length; i++) {
-      a=a.split(common_patterns[i]).join(codestr[i+119]);
+      a=a.split(common_patterns[i]).join(codestr2[i+119]);
     }
     return a;
 }
