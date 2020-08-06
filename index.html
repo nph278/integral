@@ -28,7 +28,6 @@
                 border-radius: 6px;
             }
 	</style>
-        <script type="text/javascript" src="integral.js"></script>
     </head>
     <body>
         <div class="dropdown">
@@ -83,6 +82,7 @@
             <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
         </div><br>
 
+        <script type="text/javascript" src="integral.js"></script>
         <script type="text/javascript">
             function qstr(qs) {
                 var s = location.href.replace("?","?&").split("&");
@@ -141,7 +141,7 @@
        <script type="text/javascript">
            setInterval(function() {
                byteselm.innerHTML = codelm.value.length;
-               numoutelm.value    = ';' + encodestr(Number(numelm.value)) + ';';
+               numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
                stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
 
                postTemplate();
