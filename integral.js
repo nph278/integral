@@ -72,15 +72,21 @@ function encode(a) {
 }
 
 function decodestr(a) {
-    for (var i = 128; i < codestr.length; i++) {
-      a=a.split(codestr[i]).join(common_patterns[i-128]);
+    for (var i = 0; i < 32; i ++) {
+        a = a.split(codestr[i]).join(common_patterns[i]);
+    }
+    for (var i = 128; i < 256; i++) {
+        a=a.split(codestr[i]).join(common_patterns[i-96]);
     }
     return a;
 }
 
 function encodestr(a) {
-    for (var i = 0; i < common_patterns.length; i++) {
-      a=a.split(common_patterns[i]).join(codestr[i+128]);
+    for (var i = 0; i < 32; i ++) {
+        a = a.split(common_patterns[i]).join(codestr[i]);
+    }
+    for (var i = 128; i < 256; i ++) {
+        a = a.split(common_patterns[i-96]).join(codestr[i]);
     }
     return a;
 }
