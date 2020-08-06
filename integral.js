@@ -1,30 +1,6 @@
-common_patterns = ["that","with","have","this","will",
-		   "your","from","they","know","want",
-		   "much","the" ,"and" ,"for" ,"are" ,
-		   "but" ,"not" ,"you" ,"all" ,"any" ,
-		   "can" ,"had" ,"her" ,"was" ,"one" ,
-		   "our" ,"out" ,"day" ,"get" ,"has" ,
-		   "him" ,"his" ,"how" ,"man" ,"new" ,
-		   "now" ,"old" ,"see" ,"two" ,"way" ,
-		   "who" ,"boy" ,"did" ,"its" ,"let" ,
-		   "put" ,"say" ,"she" ,"too" ,"use" ,
-		   "th"  ,"er"  ,"on"  ,"an"  ,"re"  ,
-		   "he"  ,"in"  ,"ed"  ,"nd"  ,"ha"  ,
-		   "at"  ,"en"  ,"es"  ,"of"  ,"or"  ,
-		   "nt"  ,"ea"  ,"ti"  ,"to"  ,"it"  ,
-		   "st"  ,"io"  ,"le"  ,"is"  ,"ou"  ,
-		   "ar"  ,"as"  ,"de"  ,"rt"  ,"ve"  ,
-		   " q"  ,"q "  ," w"  ,"w "  ," e"  ,
-		   "e "  ," r"  ,"r "  ," t"  ,"t "  ,
-		   " y"  ,"y "  ," u"  ,"u "  ," i"  ,
-		   "i "  ," o"  ,"o "  ," p"  ,"p "  ,
-		   " a"  ,"a "  ," s"  ,"s "  ," d"  ,
-		   "d "  ," f"  ,"f "  ," g"  ,"g "  ,
-		   " h"  ,"h "  ," j"  ,"j "  ," k"  ,
-		   "k "  ," l"  ,"l "  ," z"  ,"z "  ,
-		   " x"  ,"x "  ," c"  ,"c "  ," v"  ,
-		   "v "  ," b"  ,"b "  ," n"  ,"n "  ,
-		   " m"  ,"m "  ];
+common_patterns = ['th'  ,'Th'  ,'en'  ,'ng'  ,'he'  ,
+		   'He'  ,'at'  ,'al'  ,'in'  ,'In'  ,
+		   'ed', 'it', 'er', 'Er', 'nd', 'as', 'an', 'An', 'to', 'is', 're', 'Re', 'or', 'ha', 'es', 'Es', 'ea', 'et', 'on', 'On', 'ti', 'se', 'st', 'St', 'ar', 'ou', 'nt', 'Nt', 'te', 'of', 'the', 'The', 'ere', 'hes', 'and', 'And', 'tio', 'ver', 'ing', 'Ing', 'ter', 'his', 'ent', 'Ent', 'est', 'oft', 'ion', 'Ion', 'ers', 'ith', 'her', 'Her', 'ati', 'fth', 'for', 'For', 'hat', 'sth', 'tha', 'Tha', 'ate', 'oth', 'nth', 'Nth', 'all', 'res', 'int', 'Int', 'eth', 'ont', 'tion', 'othe', 'them', 'nthe', 'tthe', 'rthe', 'ther', 'dthe', 'thep', 'that', 'ingt', 'from', 'ofth', 'ethe', 'this', 'fthe', 'sand', 'ting', 'thes', 'sthe', 'thei', 'with', 'here', 'ngth', 'inth', 'thec', 'ions', 'atio', 'ment', 'andt', ' t', ' T', ' a', ' A', ' i', ' I', ' s', ' S', ' o', ' O', ' w', ' W', ' h', ' H', ' b', ' B', ' c', ' C', ' m', ' M'];
 
 string_chop = function(str, size) {
     if (str == null)
