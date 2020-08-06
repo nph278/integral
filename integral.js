@@ -23,8 +23,7 @@ common_patterns = ['th', 'Th', 'en', 'ng', 'he',
     ' t', ' T', ' a', ' A', ' i',
     ' I', ' s', ' S', ' o', ' O',
     ' w', ' W', ' h', ' H', ' b',
-    ' B', ' c', ' C', ' m', ' M'
-];
+    ' B', ' c', ' C', ' m', ' M'];
 
 string_chop = function(str, size) {
     if (str == null)
