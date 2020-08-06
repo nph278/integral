@@ -145,7 +145,7 @@ function actualRunlang(t, inp) {
     var str1 = "";
     for (var i = 0; i < t.length; i++) {
         if(stack[-1] == undefined) {
-            stack.push(inp_list[])
+            stack.push(inp_list[input_cnt]);
             input_cnt --;
             if(input_cnt < 1) {
                 input_cnt = inp_list.size-1;
