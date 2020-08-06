@@ -126,14 +126,13 @@ function runlang(t, inp) {
 function actualRunlang(t, inp) {
     inp = inp || "";
     var stack = [];
-    var inp_list = [];
     if (inp !== "") {
         for (var i = 0; i < inp.split("\n")
             .length; i++) {
             if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
-                inp_list.push(parseFloat(inp.split("\n")[i]));
+                stack.push(parseFloat(inp.split("\n")[i]));
             } else {
-                inp_list.push(inp.split("\n")[i]);
+                stack.push(inp.split("\n")[i]);
             }
         }
     }
@@ -141,7 +140,6 @@ function actualRunlang(t, inp) {
     var encstringmode = false;
     var charmode = false;
     var intmode = false;
-    var input_cnt = inp_list.size-1;
     var str1 = "";
     for (var i = 0; i < t.length; i++) {
         alert(stack);
