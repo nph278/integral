@@ -42,7 +42,7 @@
 
         <button style="border:1px solid;
 		       background-color:#fff" onclick="outelm.value = runlang(codelm.value, inelm.value)">
-             Run (<span id="byteselm">8</span> bytes)
+             Run (Esc):<span id="byteselm">8</span> bytes
         </button>
 
         <button onclick="permaLink()" style="border:1px solid; background-color:#fff">
@@ -143,5 +143,9 @@
                stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
                light_or_dark.innerHTML = document.getElementById("html-style").style.filter == 'invert(100%)' ? 'Light' : 'Dark';
            }, 1);
+           document.addEventListener ("keydown", e => {
+               if(e.code=="Escape")
+                    alert("Escape key pressed");
+           })
        </script>
 </body></html>
