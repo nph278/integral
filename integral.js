@@ -127,13 +127,14 @@ function runlang(t, inp) {
 function actualRunlang(t, inp) {
     inp = inp || "";
     var stack = [];
+    var inp_list = [];
     if (inp !== "") {
         for (var i = 0; i < inp.split("\n")
             .length; i++) {
             if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
-                stack.push(parseFloat(inp.split("\n")[i]));
+                inp_list.push(parseFloat(inp.split("\n")[i]));
             } else {
-                stack.push(inp.split("\n")[i]);
+                inp_list.push(inp.split("\n")[i]);
             }
         }
     }
@@ -141,8 +142,16 @@ function actualRunlang(t, inp) {
     var encstringmode = false;
     var charmode = false;
     var intmode = false;
+    var input_cnt = inp_list.size-1;
     var str1 = "";
     for (var i = 0; i < t.length; i++) {
+        if(stack[-1] == undefined) {
+            stack.push(inp_list[])
+            input_cnt --;
+            if(input_cnt < 1) {
+                input_cnt = inp_list.size-1;
+            }
+        }
         if (stringmode) {
             if (t[i] === "⌡") {
                 stringmode = false;
@@ -736,7 +745,6 @@ function actualRunlang(t, inp) {
                 case "z":
                     stack.push(128);
                     break;
-
             }
         }
     }
