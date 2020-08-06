@@ -86,11 +86,19 @@ function encodestr(a) {
 }
 
 function encodeLink(a) {
-	return btoa(a.split``.map(i=>String.fromCharCode(codestr.indexOf(i))).join``).replace(/=+$/,'')
+    try {
+        return btoa(a.split``.map(i=>String.fromCharCode(codestr.indexOf(i))).join``).replace(/=+$/,'')
+    } catch(error) {
+        return escape(a)
+    }
 }
 
 function decodeLink(a) {
-	return atob(a).split``.map(i=>codestr[i.charCodeAt(0)]).join``
+    try {
+        return atob(a).split``.map(i=>codestr[i.charCodeAt(0)]).join``
+    } catch(error) {
+        return unescape(a)
+    }
 }
 
 function runlang(t,inp) {
