@@ -42,24 +42,25 @@
 
         <button style="border:1px solid;
 		       background-color:#fff" onclick="outelm.value = runlang(codelm.value, inelm.value)">
-             Run (<span id="byteselm">8</span> bytes)
+             Run (Esc):<span id="byteselm">0</span> bytes
         </button>
 
         <button onclick="permaLink()" style="border:1px solid; background-color:#fff">
              Permalink
         </button>
 
-        <button onclick="postTemplate()" style="border:1px solid; background-color:#fff">
-             SE post template
-        </button>
+        
 
         <button onclick="switchColor()" style="border:1px solid; background-color:#fff">
              <span id="light_or_dark">Dark</span> mode
         </button><br>
 
-        <textarea title="code" id="codelm" placeholder="Enter your code" spellcheck="false" style="margin: 0px;
-                         width: 1045px;
-                         height: 109px;">        </textarea><br>
+        <textarea title="code" id="codelm" placeholder="Enter your code" spellcheck="false" style="margin: 0px; width: 512px; height: 129px;">        </textarea>
+
+        <textarea id="templateelm" placeholder="SE post template" readonly="" margin:0="" style="margin: 0px;
+                         border:#fff;
+                         width: 515px;
+                         height: 130px;">        </textarea><br>
 
         <textarea id="inelm" placeholder="Enter inputs, newline separated" spellcheck="false" style="margin: 0px;
                          height: 131px;
@@ -91,9 +92,10 @@
                 return "";
             }
 
-            var codelm  = document.getElementById("codelm");
-            var byteslm = document.getElementById("byteselm");
-            var x       = decodeLink(qstr("code"));
+            var codelm      = document.getElementById("codelm");
+            var byteslm     = document.getElementById("byteselm");
+            var templateelm = document.getElementById("templateelm");
+            var x           = decodeLink(qstr("code"));
 
             document.getElementById("codelm").value = x;
 
@@ -108,7 +110,7 @@
                              " Bytes\n\n";
                 var body   = codelm.value;
 
-                outelm.value = header                                                 +
+           templateelm.value = header                                                 +
                                '<pre>\n'                                              +
                                body                                                   +
                                '\n</pre>'                                             +
@@ -141,7 +143,14 @@
                byteselm.innerHTML = codelm.value.length;
                numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
                stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
+
+               postTemplate();
+
                light_or_dark.innerHTML = document.getElementById("html-style").style.filter == 'invert(100%)' ? 'Light' : 'Dark';
            }, 1);
+           document.addEventListener ("keydown", e => {
+               if(e.code=="Escape")
+                    outelm.value = runlang(codelm.value, inelm.value);
+           })
        </script>
 </body></html>
