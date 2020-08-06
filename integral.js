@@ -102,6 +102,15 @@ function decodeLink(a) {
 }
 
 function runlang(t,inp) {
+	// wrapper
+	try {
+		return actualRunlang(t,inp);
+	} catch(error) {
+		return error
+	}
+}
+
+function actualRunlang(t,inp) {
 		inp = inp || "";
 		var stack = [];
 		if (inp!=="") {
