@@ -72,15 +72,15 @@ function encode(a) {
 }
 
 function decodestr(a) {
-    for (var i = 119; i < codestr.length; i++) {
-      a=a.split(codestr[i]).join(common_patterns[i-119]);
+    for (var i = 128; i < codestr.length; i++) {
+      a=a.split(codestr[i]).join(common_patterns[i-128]);
     }
     return a;
 }
 
 function encodestr(a) {
     for (var i = 0; i < common_patterns.length; i++) {
-      a=a.split(common_patterns[i]).join(codestr[i+119]);
+      a=a.split(common_patterns[i]).join(codestr[i+128]);
     }
     return a;
 }
