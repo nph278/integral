@@ -141,7 +141,7 @@
        <script type="text/javascript">
            setInterval(function() {
                byteselm.innerHTML = codelm.value.length;
-               numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
+               numoutelm.value    = ';' + encodestr(Number(numelm.value)) + ';';
                stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
 
                postTemplate();
