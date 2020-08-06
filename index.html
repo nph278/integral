@@ -112,7 +112,7 @@
                              " Bytes\n\n";
                 var body   = codelm.value;
 
-                outelm.value = header                                                 +
+           templateelm.value = header                                                 +
                                '<pre>\n'                                              +
                                body                                                   +
                                '\n</pre>'                                             +
@@ -123,7 +123,7 @@
             }
 
             function permaLink(){
-                templateelmelm.value = '[`'                                              +
+                outelm.value = '[`'                                              +
 			       codelm.value                                      +
 			       '` ('                                             +
 			       byteselm.innerHTML                                +
@@ -146,7 +146,7 @@
                numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
                stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
 
-               permaLink();
+               postTemplate();
 
                light_or_dark.innerHTML = document.getElementById("html-style").style.filter == 'invert(100%)' ? 'Light' : 'Dark';
            }, 1);
