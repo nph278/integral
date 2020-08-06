@@ -28,7 +28,6 @@ function actualRunlang(t, inp) {
     var intmode = false;
     var str1 = "";
     for (var i = 0; i < t.length; i++) {
-        alert(stack);
         if (stringmode) {
             if (t[i] === "⌡") {
                 stringmode = false;
