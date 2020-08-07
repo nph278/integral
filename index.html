@@ -105,7 +105,7 @@
             x = decodeLink(qstr("sep"));
             document.getElementById("insepelm").value  = x;
 
-            document.getElementById("outelm").value  = runlang(codelm.value, inelm.value);
+            document.getElementById("outelm").value  = runlang(codelm.value, inelm.value, insepelm.value);
 
             function postTemplate(){
                 var header = "# [Integral](https://github.com/nph278/integral), " +
@@ -135,7 +135,9 @@
 			       encodeLink(codelm.value)                          +
 			       '&input='                                         +
 			       encodeLink(inelm.value)                           +
-			       ')'
+			       '&sep='                                           +
+			       encodeLink(insepelm.value)                        +
+			       ')';
             }
 
             function switchColor() {
