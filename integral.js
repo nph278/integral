@@ -8,7 +8,7 @@ function runlang(t, inp) {
         if(a.length==0)
             return String(actualRunlang(t, a[0]))
         for(var x=0;x<a.length;x++)
-            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x], sep))+"\n\n";
+            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x]))+"\n\n";
         return o;
     } catch (error) {
         return error;
