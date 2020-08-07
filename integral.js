@@ -1,6 +1,6 @@
 document.write("<script language=javascript src='constants.js'></script>")
 
-function runlang(t, inp) {
+function runlang(t, inp, sep) {
     // wrapper
     try {
         return actualRunlang(t, inp);
@@ -19,17 +19,18 @@ function sPop(arr, inp) {
     return a;
 }
 
-function actualRunlang(t, inp) {
+function actualRunlang(t, inp, sep) {
     inp = inp || "";
+    sep = sep || "\n";
     var stack = [];
     var new_inp = [];
     if (inp !== "") {
-        for (var i = 0; i < inp.split("\n")
+        for (var i = 0; i < inp.split(sep)
             .length; i++) {
-            if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
-                new_inp.push(parseFloat(inp.split("\n")[i]));
+            if (!!Number(inp.split(sep)[i]) || inp.split(sep)[i] === "0") {
+                new_inp.push(parseFloat(inp.split(sep)[i]));
             } else {
-                new_inp.push(inp.split("\n")[i]);
+                new_inp.push(inp.split(sep)[i]);
             }
         }
     }
