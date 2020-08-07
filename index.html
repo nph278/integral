@@ -71,18 +71,18 @@
                          height: 130px;">        </textarea><br>
 
         <div style="align:left">
-            <input placeholder="encode integers here" type="number" id="numelm">
+            <input placeholder="encode integers here" type="number" id="numelm" style="border:1px solid">
 
             <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
         </div>
 
         <div style="align:right">
-            <input placeholder="encode string here" type="text" id="strelm" spellcheck="false">
+            <input placeholder="encode string here" type="text" id="strelm" spellcheck="false" style="border:1px solid">
 
             <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
         </div><br>
 
-        <script type="text/javascript" src="integral.js"></script>
+        <script type="text/javascript" src="integral.js"></script><script language="javascript" src="constants.js"></script>
         <script type="text/javascript">
             function qstr(qs) {
                 var s = location.href.replace("?","?&").split("&");
