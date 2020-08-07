@@ -2,14 +2,14 @@ document.write("<script language=javascript src='constants.js'></script>")
 
 function runlang(t, inp, sep) {
     // wrapper
-    a = inp.split(eval(sep))
+    a = inp.split(eval(sep||"\\n"))
     x = []
     try {
         for(i = 0; i < a.length; i++)
             x.push(actualRunlang(t, a, sep));
         return String(x);
     } catch (error) {
-        return error + String(inp);
+        return error;
     }
 }
 
