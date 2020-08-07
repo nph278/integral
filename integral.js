@@ -9,7 +9,7 @@ function runlang(t, inp, sep) {
             x.push(actualRunlang(t, a, sep));
         return String(x);
     } catch (error) {
-        return error
+        return error + String(inp);
     }
 }
 
