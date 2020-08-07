@@ -54,12 +54,9 @@
                          border:#fff;
                          width: 515px;
                          height: 130px;">        </textarea>
+       <br>
 
-<br><br>
-<input placeholder="input separator" type="text" id="insepelm" spellcheck="false" style="border:1px solid">
-<br>
-
-        <textarea id="inelm" placeholder="Enter inputs, newline separated" spellcheck="false" style="margin: 0px;
+        <textarea id="inelm" placeholder="Enter inputs, newline separated. To allow test suites, separate several tests with two newlines" spellcheck="false" style="margin: 0px;
                          height: 131px;
                          width: 512px;">        </textarea>
 
@@ -94,7 +91,6 @@
             var codelm      = document.getElementById("codelm");
             var byteslm     = document.getElementById("byteselm");
             var templateelm = document.getElementById("templateelm");
-            var insepelm    = document.getElementById("insepelm");
 
             var x           = decodeLink(qstr("code"));
             document.getElementById("codelm")  .value  = x;
@@ -121,8 +117,6 @@
                                encodeLink(codelm.value)                               +
                                '&input='                                              +
                                encodeLink(inelm.value)                                +
-                               '&sep='                                                +
-                               encodeLink(insepelm.value)                             +
                                ")\n\n";
             }
 
@@ -135,8 +129,6 @@
 			       encodeLink(codelm.value)                          +
 			       '&input='                                         +
 			       encodeLink(inelm.value)                           +
-			       '&sep='                                           +
-			       encodeLink(insepelm.value)                        +
 			       ')';
             }
 
