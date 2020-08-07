@@ -5,9 +5,9 @@ function runlang(t, inp, sep) {
     console.log(sep||"\n\n")
     try {
         var a = inp.split(sep||"\n\n");
-        var o = [];
+        var o = "";
         for(var x=0;x<a.length;x++)
-            o.push(actualRunlang(t, inp, sep));
+            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x], sep))+"\n";
         return o;
     } catch (error) {
         return error;
