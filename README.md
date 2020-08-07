@@ -1,5 +1,5 @@
 ## Integral
-Integral is a language invented by [nph](https://codegolf.stackexchange.com/users/95627/nph).
+Integral is a new golfing language invented by [nph](https://codegolf.stackexchange.com/users/95627/nph).
 
 ## FAQ
 ### Why is it xx bytes? Shouldn't it be yy bytes?
