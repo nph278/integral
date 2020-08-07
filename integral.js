@@ -2,8 +2,12 @@ document.write("<script language=javascript src='constants.js'></script>")
 
 function runlang(t, inp, sep) {
     // wrapper
+    a = inp.split(eval(sep))
+    x = []
     try {
-        return actualRunlang(t, inp);
+        for(i = 0; i < a.length; i++)
+            x.push(actualRunlang(t, a, sep));
+        return String(x);
     } catch (error) {
         return error
     }
@@ -21,16 +25,15 @@ function sPop(arr, inp) {
 
 function actualRunlang(t, inp, sep) {
     inp = inp || "";
-    sep = sep || "\n";
     var stack = [];
     var new_inp = [];
     if (inp !== "") {
-        for (var i = 0; i < inp.split(sep)
+        for (var i = 0; i < inp.split("\n")
             .length; i++) {
-            if (!!Number(inp.split(sep)[i]) || inp.split(sep)[i] === "0") {
-                new_inp.push(parseFloat(inp.split(sep)[i]));
+            if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
+                new_inp.push(parseFloat(inp.split("\n")[i]));
             } else {
-                new_inp.push(inp.split(sep)[i]);
+                new_inp.push(inp.split("\n")[i]);
             }
         }
     }
