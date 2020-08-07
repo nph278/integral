@@ -25,13 +25,13 @@
     </head>
     <body>
         <div class="dropdown">
-            <b><a href="https://github.com/nph278/integral" target="_blank">Integral</a> interpreter </b>
+            <b><a href="https://github.com/nph278/integral" target="_blank" style="color:blue">Integral</a> interpreter </b>
             <div class="dropdown-content">
-		Integral (<a href="https://chat.stackexchange.com/rooms/111375/integral">PPCG chat</a>) is a stacked-based programming language that PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank">nph</a> came up with. It uses code page 437.
+		Integral (<a href="https://chat.stackexchange.com/rooms/111375/integral" style="color:red">PPCG chat</a>) is a stacked-based programming language that PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank" style="color:orange">nph</a> came up with. It uses code page 437.
             </div>
         </div>
 
-        <i><a href="table.html" target="_blank">(Instruction table)</a></i>
+        <i><a href="table.html" target="_blank" style="color:purple">(Instruction table)</a></i>
 
         <button style="border:1px solid;
 		       background-color:#fff" onclick="outelm.value = runlang(codelm.value, inelm.value)">
@@ -76,7 +76,7 @@
             <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
         </div><br>
 
-        <script type="text/javascript" src="integral.js"></script><script language="javascript" src="constants.js"></script>
+        <script type="text/javascript" src="integral.js"></script><script language="javascript" src="constants.js"></script><script language="javascript" src="constants.js"></script>
         <script type="text/javascript">
             function qstr(qs) {
                 var s = location.href.replace("?","?&").split("&");
@@ -147,4 +147,5 @@
                     outelm.value = runlang(codelm.value, inelm.value);
            })
        </script>
+
 </body></html>
