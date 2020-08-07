@@ -5,10 +5,10 @@ function runlang(t, inp) {
     try {
         var a = inp.split("\n\n");
         var o = "";
-        if(a.length==0)
+        if(a.length==1)
             return String(actualRunlang(t, a[0]))
         for(var x=0;x<a.length;x++)
-            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x]))+"\n\n";
+            o += "=== Test case #"+(x+1)+", input:"+a[x].replace(/\n/g,"\\n")+" ===\n"+String(actualRunlang(t, a[x]))+"\n\n";
         return o;
     } catch (error) {
         return error;
