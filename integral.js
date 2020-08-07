@@ -2,6 +2,7 @@ document.write("<script language=javascript src='constants.js'></script>")
 
 function runlang(t, inp, sep) {
     // wrapper
+    console.log(sep)
     try {
         return actualRunlang(t, inp, sep);
     } catch (error) {
