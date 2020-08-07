@@ -180,11 +180,11 @@ function actualRunlang(t, inp) {
                     }
                     break;
                 case "►":
-                    alert(String(stack));
+                    console.log(String(stack));
                     b = sPop(stack, inp);
-                    alert(String(stack));
+                    console.log(String(stack));
                     a = sPop(stack, inp);
-                    alert(String(stack));
+                    console.log(String(stack));
                     stack.push(a + b);
                     break;
                 case "◄":
