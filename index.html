@@ -53,7 +53,11 @@
         <textarea id="templateelm" placeholder="SE post template" readonly="" margin:0="" style="margin: 0px;
                          border:#fff;
                          width: 515px;
-                         height: 130px;">        </textarea><br>
+                         height: 130px;">        </textarea>
+
+<br><br>
+<input placeholder="input separator" type="text" id="insepelm" spellcheck="false" style="border:1px solid">
+<br>
 
         <textarea id="inelm" placeholder="Enter inputs, newline separated" spellcheck="false" style="margin: 0px;
                          height: 131px;
@@ -62,7 +66,8 @@
         <textarea id="outelm" placeholder="output appears here" readonly="" margin:0="" style="margin: 0px;
                          border:#fff;
                          width: 515px;
-                         height: 130px;">        </textarea><br>
+                         height: 130px;">        </textarea>
+<br><br>
 
         <div style="align:left">
             <input placeholder="encode integers here" type="number" id="numelm" style="border:1px solid">
@@ -76,7 +81,7 @@
             <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
         </div><br>
 
-        <script type="text/javascript" src="integral.js"></script><script language="javascript" src="constants.js"></script><script language="javascript" src="constants.js"></script>
+        <script type="text/javascript" src="integral.js"></script><script language="javascript" src="constants.js"></script><script language="javascript" src="constants.js"></script><script language="javascript" src="constants.js"></script>
         <script type="text/javascript">
             function qstr(qs) {
                 var s = location.href.replace("?","?&").split("&");
@@ -89,12 +94,16 @@
             var codelm      = document.getElementById("codelm");
             var byteslm     = document.getElementById("byteselm");
             var templateelm = document.getElementById("templateelm");
-            var x           = decodeLink(qstr("code"));
+            var insepelm    = document.getElementById("insepelm");
 
-            document.getElementById("codelm").value = x;
+            var x           = decodeLink(qstr("code"));
+            document.getElementById("codelm")  .value  = x;
 
             x = decodeLink(qstr("input"));
-            document.getElementById("inelm").value  = x;
+            document.getElementById("inelm")   .value  = x;
+
+            x = decodeLink(qstr("sep"));
+            document.getElementById("insepelm").value  = x;
 
             document.getElementById("outelm").value  = runlang(codelm.value, inelm.value);
 
@@ -111,7 +120,10 @@
                                '\n\n[Try it!](https://a-ee.github.io/integral/?code=' +
                                encodeLink(codelm.value)                               +
                                '&input='                                              +
-                               encodeLink(inelm.value)+")\n\n";
+                               encodeLink(inelm.value)                                +
+                               '&sep='                                                +
+                               encodeLink(insepelm.value)                             +
+                               ")\n\n";
             }
 
             function permaLink(){
@@ -146,6 +158,5 @@
                if(e.code=="Escape")
                     outelm.value = runlang(codelm.value, inelm.value);
            })
-       </script>
-
+        </script>
 </body></html>
