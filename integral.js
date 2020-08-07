@@ -34,7 +34,7 @@ function actualRunlang(t, inp, sep="\n") {
             if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
                 new_inp.push(parseFloat(inp.split("\n")[i]));
             } else {
-                new_inp.push(inp.split("\n")[i]);
+                new_inp.push(eval(inp.split("\n")[i]));
             }
         }
     }
