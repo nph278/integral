@@ -1,4 +1,4 @@
-document.write("<script language=javascript src='compression.js'></script>")
+document.write("<script language=javascript src='constants.js'></script>")
 
 function runlang(t, inp) {
     // wrapper
