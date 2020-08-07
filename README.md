@@ -12,6 +12,12 @@ Also, if you opened https://a-ee.github.io/integral/, that might be another reas
 
 If it still doesn't work in https://nph278.github.io/integral/, feel free to raise an issue to the interpreter. Or, if you aren't the post writer, please write a comment to mention the problem.
 
+## Online interpreter tips! (pretty self-explanatory)
+* You can press the Dark mode button to switch to dark mode, if you prefer dark mode over light mode (like how @nph did in [their website](https://nph278.github.io/)).
+* You can have several different test cases by separating them with two newlines. The inputs separated by these two newlines execute by themselves. Try it: [`►` (1 bytes)](https://a-ee.github.io/integral/?code=EA&input=1%0A2%0A%0A4%0A4%0A%0A2%0A4)
+* If you are looking for the SE post template button, you might be surprised that it doesn't exist. However, evidently, you can see that the SE post template is right next to the code buffer!
+* You can use the bottom bar to conveniently encode integers and strings.
+
 ## Links
 A tutorial might happen sometime...
 
