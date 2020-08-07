@@ -3,7 +3,7 @@ document.write("<script language=javascript src='constants.js'></script>")
 function runlang(t, inp, sep) {
     // wrapper
     try {
-        return actualRunlang(t, a, sep);
+        return actualRunlang(t, inp, sep);
     } catch (error) {
         return error;
     }
