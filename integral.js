@@ -92,68 +92,68 @@ function actualRunlang(t, inp) {
         } else {
             snack: switch (t[i]) {
                 case "☺":
-                    stack.pop();
+                    sPop(stack, inp);
                     break snack;
                 case "☻":
-                    stack.pop();
-                    stack.pop();
+                    sPop(stack, inp);
+                    sPop(stack, inp);
                     break snack;
                     break;
                 case "♥":
-                    stack.pop();
-                    stack.pop();
-                    stack.pop();
+                    sPop(stack, inp);
+                    sPop(stack, inp);
+                    sPop(stack, inp);
                     break snack;
                     break;
                 case "♦":
-                    tmp = stack.pop();
-                    tmp2 = stack.pop();
+                    tmp = sPop(stack, inp);
+                    tmp2 = sPop(stack, inp);
                     stack.push(tmp, tmp2);
                     break snack;
                     break;
                 case "♠":
-                    c = stack.pop();
-                    b = stack.pop();
-                    a = stack.pop();
+                    c = sPop(stack, inp);
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(b, a, c);
                     break snack;
                     break;
                 case "•":
-                    c = stack.pop();
-                    b = stack.pop();
-                    a = stack.pop();
+                    c = sPop(stack, inp);
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(b, c, a);
                     break snack;
                     break;
                 case "◘":
-                    c = stack.pop();
-                    b = stack.pop();
-                    a = stack.pop();
+                    c = sPop(stack, inp);
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(c, a, b);
                     break snack;
                     break;
                 case "○":
-                    c = stack.pop();
-                    b = stack.pop();
-                    a = stack.pop();
+                    c = sPop(stack, inp);
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(c, b, a);
                     break snack;
                     break;
                 case "◙":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a);
                     stack.push(a);
                     break snack;
                     break;
                 case "♂":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a);
                     stack.push(a);
                     stack.push(a);
                     break snack;
                     break;
                 case "♀":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a);
                     stack.push(a);
                     stack.push(a);
@@ -165,90 +165,90 @@ function actualRunlang(t, inp) {
                     break snack;
                     break;
                 case "♫":
-                    b = stack.pop();
-                    a = Number(stack.pop());
+                    b = sPop(stack, inp);
+                    a = Number(sPop(stack, inp));
                     for (var j = 0; j < a; j++) {
                         stack.push(b);
                     }
                     break snack;
                     break;
                 case "☼":
-                    b = Number(stack.pop());
-                    a = stack.pop();
+                    b = Number(sPop(stack, inp));
+                    a = sPop(stack, inp);
                     for (var j = 0; j < b; j++) {
                         stack.push(a);
                     }
                     break;
                 case "►":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(a + b);
                     break;
                 case "◄":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a - b);
                     break;
                 case "↕":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a * b);
                     break;
                 case "‼":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a / b);
                     break;
                 case "¶":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a % b);
                     break;
                 case "§":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(Math.pow(a, b));
                     break;
                 case "▬":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(~a);
                     break;
                 case "↨":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a | b);
                     break;
                 case "↓":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a & b);
                     break;
                 case "→":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a ^ b);
                     break;
                 case "←":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(~(a | b));
                     break;
                 case "∟":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(~(a & b));
                     break;
                 case "↔":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(~(a ^ b));
                     break;
                 case "▲":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(1 + a);
                     break;
                 case "▼":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(a - 1);
                     break;
                 case " ":
@@ -300,7 +300,7 @@ function actualRunlang(t, inp) {
                     stack.push(1000000000);
                     break;
                 case "♣":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(2 * a);
                     break;
                 case "0":
@@ -313,15 +313,15 @@ function actualRunlang(t, inp) {
                     stack.push((Math.sqrt(5) + 1) / 2);
                     break;
                 case "3":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(Math.pow(10, a));
                     break;
                 case "4":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(Math.pow(a, 2));
                     break;
                 case "5":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(Math.pow(Math.E, a));
                     break;
                 case "⌡":
@@ -343,37 +343,37 @@ function actualRunlang(t, inp) {
                     intmode = true;
                     break;
                 case "<":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(Number(!a));
                     break;
                 case "=":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a || b);
                     break;
                 case ">":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(a && b);
                     break;
                 case "?":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(Number((a || b) && (!a && b)));
                     break;
                 case "@":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(Number(!(a || b)));
                     break;
                 case "A":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(Number(!(a && b)));
                     break;
                 case "B":
-                    b = Number(stack.pop());
-                    a = Number(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(Number(!((a || b) && (!a && b))));
                     break;
                 case "C":
@@ -413,38 +413,38 @@ function actualRunlang(t, inp) {
                     stack.push("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");
                     break;
                 case "O":
-                    b = String(stack.pop());
-                    a = String(stack.pop());
+                    b = String(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     stack.push(a.split(b));
                     break;
                 case "P":
-                    b = stack.pop();
-                    a = String(stack.pop());
+                    b = sPop(stack, inp);
+                    a = String(sPop(stack, inp));
                     stack.push(a.join(b));
                     break;
                 case "Q":
-                    b = Number(stack.pop());
-                    a = String(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     stack.push(string_chop(a, b));
                     break;
                 case "R":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a.join("\n"));
                     break;
                 case "S":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a.join(""));
                     break;
                 case "T":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a.join(" "));
                     break;
                 case "U":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a.join(","));
                     break;
                 case "V":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     if (typeof a === "string") {
                         stack.push(a.split("")
                             .reverse()
@@ -454,32 +454,32 @@ function actualRunlang(t, inp) {
                     }
                     break;
                 case "W":
-                    c = String(stack.pop());
-                    b = String(stack.pop());
-                    a = String(stack.pop());
+                    c = String(sPop(stack, inp));
+                    b = String(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     stack.push(a.split(b)
                         .join(c));
                     break;
                 case "X":
-                    c = String(stack.pop());
-                    b = String(stack.pop());
-                    a = String(stack.pop());
+                    c = String(sPop(stack, inp));
+                    b = String(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     stack.push(a.replace(RegExp(b, "g"), c));
                     break;
                 case "Y":
-                    a = String(stack.pop());
+                    a = String(sPop(stack, inp));
                     stack.push(a.split("\n"));
                     break;
                 case "Z":
-                    a = String(stack.pop());
+                    a = String(sPop(stack, inp));
                     stack.push(a.split(""));
                     break;
                 case "[":
-                    a = String(stack.pop());
+                    a = String(sPop(stack, inp));
                     stack.push(a.split(" "));
                     break;
                 case "\\":
-                    a = String(stack.pop());
+                    a = String(sPop(stack, inp));
                     stack.push(a.split(","));
                     break;
                 case "]":
@@ -489,67 +489,67 @@ function actualRunlang(t, inp) {
                     stack.push("⌡");
                     break;
                 case "_":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(Number(a < b));
                     break;
                 case "`":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(Number(a == b));
                     break;
                 case "a":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(Number(a > b));
                     break;
                 case "b":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(Number(a <= b));
                     break;
                 case "c":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     stack.push(Number(a >= b));
                     break;
                 case "6":
-                    a = Number(stack.pop());
+                    a = Number(sPop(stack, inp));
                     stack.push(Math.sqrt(a));
                     break;
                 case "d":
-                    a = String(stack.pop());
+                    a = String(sPop(stack, inp));
                     t = t.slice(0, i + 1) + a + t.slice(i + 1, t.length);
                     break;
                 case "e":
-                    b = Number(stack.pop());
-                    a = String(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     t = t.slice(0, i + 1) + a.repeat(b) + t.slice(i + 1, t.length);
                     break;
                 case "÷": // NBSP
                     encstringmode = true;
                     break;
                 case "f":
-                    b = Number(stack.pop());
-                    a = String(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     stack.push(a.repeat(b));
                     break;
                 case "g":
-                    b = String(stack.pop());
-                    a = Number(stack.pop());
+                    b = String(sPop(stack, inp));
+                    a = Number(sPop(stack, inp));
                     stack.push(b.repeat(a));
                     break;
                 case "h":
-                    b = Number(stack.pop());
-                    a = String(stack.pop());
+                    b = Number(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     if (b) {
                         t = t.slice(0, i + 1) + a + t.slice(i + 1, t.length);
                     }
                     break;
                 case "i":
-                    c = Number(stack.pop());
-                    b = String(stack.pop());
-                    a = String(stack.pop());
+                    c = Number(sPop(stack, inp));
+                    b = String(sPop(stack, inp));
+                    a = String(sPop(stack, inp));
                     if (c) {
                         t = t.slice(0, i + 1) + a + t.slice(i + 1, t.length);
                     } else {
@@ -557,12 +557,12 @@ function actualRunlang(t, inp) {
                     }
                     break;
                 case "j":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack = stack.concat(a);
                     break;
                 case "k":
-                    b = stack.pop();
-                    a = stack.pop();
+                    b = sPop(stack, inp);
+                    a = sPop(stack, inp);
                     if (a > b) {
                         stack.push(-1);
                     } else if (b > a) {
@@ -572,48 +572,48 @@ function actualRunlang(t, inp) {
                     }
                     break;
                 case "l":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a.length);
                     break;
                 case "m":
-                    b = Number(stack.pop());
-                    a = stack.pop();
+                    b = Number(sPop(stack, inp));
+                    a = sPop(stack, inp);
                     stack.push(a[b]);
                     break;
                 case "n":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a[0]);
                     break;
                 case "o":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(a[a.length - 1]);
                     break;
                 case "p":
-                    c = Number(stack.pop());
-                    b = Number(stack.pop());
-                    a = stack.pop();
+                    c = Number(sPop(stack, inp));
+                    b = Number(sPop(stack, inp));
+                    a = sPop(stack, inp);
                     stack.push(a.slice(b, c));
                     break;
                 case "q":
-                    b = Number(stack.pop());
-                    a = stack.pop();
+                    b = Number(sPop(stack, inp));
+                    a = sPop(stack, inp);
                     stack.push(a.slice(0, b));
                     break;
                 case "r":
-                    b = Number(stack.pop());
-                    a = stack.pop();
+                    b = Number(sPop(stack, inp));
+                    a = sPop(stack, inp);
                     stack.push(a.slice(b, a.length));
                     break;
                 case "s":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(Math.floor(a));
                     break;
                 case "t":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(Math.ceil(a));
                     break;
                 case "u":
-                    a = stack.pop();
+                    a = sPop(stack, inp);
                     stack.push(Math.round(a));
                     break;
                 case "v":
