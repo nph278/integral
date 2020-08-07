@@ -2,9 +2,13 @@ document.write("<script language=javascript src='constants.js'></script>")
 
 function runlang(t, inp, sep) {
     // wrapper
-    console.log(sep)
+    console.log(sep||"\n\n")
     try {
-        return actualRunlang(t, inp, sep);
+        var a = inp.split(sep||"\n\n");
+        var o = [];
+        for(var x=0;x<a.length;x++)
+            o.push(actualRunlang(t, inp, sep));
+        return o;
     } catch (error) {
         return error;
     }
@@ -20,7 +24,7 @@ function sPop(arr, inp) {
     return a;
 }
 
-function actualRunlang(t, inp, sep) {
+function actualRunlang(t, inp, sep="\n") {
     inp = inp || "";
     var stack = [];
     var new_inp = [];
