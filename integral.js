@@ -1,13 +1,14 @@
 document.write("<script language=javascript src='constants.js'></script>")
 
-function runlang(t, inp, sep) {
+function runlang(t, inp) {
     // wrapper
-    console.log(sep||"\n\n")
     try {
-        var a = inp.split(sep||"\n\n");
+        var a = inp.split("\n\n");
         var o = "";
+        if(a.length==0)
+            return String(actualRunlang(t, a[0]))
         for(var x=0;x<a.length;x++)
-            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x], sep))+"\n";
+            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x], sep))+"\n\n";
         return o;
     } catch (error) {
         return error;
@@ -24,7 +25,7 @@ function sPop(arr, inp) {
     return a;
 }
 
-function actualRunlang(t, inp, sep="\n") {
+function actualRunlang(t, inp) {
     inp = inp || "";
     var stack = [];
     var new_inp = [];
