@@ -1,5 +1,12 @@
 ## Integral
-Integral is a new golfing language invented by [nph](https://codegolf.stackexchange.com/users/95627/nph).
+Integral is a new stack-based golfing language invented by [nph](https://codegolf.stackexchange.com/users/95627/nph).
+
+## Example programs
+Let's start with a few sample programs, to showcase the language.
+### Hello, World!
+```
+⌡Hello, World!
+```
 
 ## FAQ
 ### Why is it xx bytes? Shouldn't it be yy bytes?
