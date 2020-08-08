@@ -1,7 +1,10 @@
 document.write("<script language=javascript src='constants.js'></script>")
 
+var input_cnt = 0;
+
 function runlang(t, inp) {
     // wrapper
+    input_cnt = 0;
     try {
         var a = inp.split("\n\n");
         var o = "";
@@ -14,8 +17,6 @@ function runlang(t, inp) {
         return error;
     }
 }
-
-var input_cnt = 0;
 
 function sPop(arr, inp) {
     a = arr.pop();
