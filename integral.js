@@ -35,8 +35,10 @@ function actualRunlang(t, inp) {
             .length; i++) {
             if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
                 new_inp.push(parseFloat(inp.split("\n")[i]));
+                stack.push(parseFloat(inp.split("\n")[i]));
             } else {
                 new_inp.push(eval(inp.split("\n")[i]));
+                stack.push(eval(inp.split("\n")[i]));
             }
         }
     }
