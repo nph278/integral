@@ -18,6 +18,15 @@ Even shorter:
 
 Integral uses an optimized 130 word dictionary to optimally compress any occurance of characters. Wrapping your text in `÷` instead of `⌡` tells the interpreter to automatically decompress the string. And like `⌡` s, if you have a `÷` at the end of a program, you can leave it off.
 
+## Quine
+```
+⌡^♦►◙►⌡^♦►◙►
+```
+This is what the program does behind the scenes:
+```
+⌡^♦►◙►⌡^♦►◙►
+```
+
 ## FAQ
 ### Why is it xx bytes? Shouldn't it be yy bytes?
 Like most modern golfing languages, which encode an SBCS codepage, Integral encodes the CP437 codepage, in which every character is always 256 bytes. If you want to take a look at the entire codepage, you can go to [constants.js](https://github.com/A-ee/integral/blob/master/constants.js). So, don't be surprised when the code length in UTF-8 is different than the shown code length!
