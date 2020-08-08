@@ -7,6 +7,16 @@ Let's start with a few sample programs, to showcase the language.
 ```
 ⌡Hello, World!
 ```
+Unlike most stack-based golfing languages, the quote delimiter is non-ASCII(`⌡`), which brings in a lot of convenience, because you'll never need to escape the quote when you're trying to enter an ASCII character.
+
+In Integral, the entire stack is automatically outputted, joined by newlines. Also, when you have a string literal at the end of the program, you can leave out the ending quotation mark and it will be automatically inserted.
+
+Even shorter:
+```
+÷▄llo,▒╦ld!
+```
+
+Integral uses an optimized 160 word dictionary to optimally compress any occurance of characters. Wrapping your text in `÷` instead of `⌡` tells the interpreter to automatically decompress the string. And like `⌡` s, if you have a `÷` at the end of a program, you can leave it off.
 
 ## FAQ
 ### Why is it xx bytes? Shouldn't it be yy bytes?
