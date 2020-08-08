@@ -24,7 +24,14 @@ Integral uses an optimized 130 word dictionary to optimally compress any occuran
 ```
 This is what the program does behind the scenes:
 ```
-⌡^♦►◙►⌡^♦►◙►
+⌡^♦►◙►⌡      Push "^♦►◙►"
+       ^     Push "⌡"
+        ♦    Swap. Stack: ["⌡", "^♦►◙►"]
+         ►   Concatenate: stack: ["⌡^♦►◙►"]
+          ◙  Duplicate. stack: ["⌡^♦►◙►", "⌡^♦►◙►"]
+           ► Concatenate; stack: ["⌡^♦►◙►⌡^♦►◙►"]
+
+Implicit output at the end of the program
 ```
 
 ## FAQ
