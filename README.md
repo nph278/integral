@@ -56,5 +56,5 @@ A tutorial might happen sometime...
 
 * [Integral Chat](https://chat.stackexchange.com/rooms/111375/integral)
 * [Online interpreter link](https://nph278.github.io/integral/)
-* [Instruction reference](https://github.com/A-ee/integral/blob/master/docs/instructions.txt)
+* [Instruction reference](https://github.com/nph278/integral/blob/master/docs/instructions.txt)
 * [Language Showcase](https://codegolf.stackexchange.com/a/208978/96495)
