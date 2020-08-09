@@ -2,6 +2,8 @@ document.write("<script language=javascript src='constants.js'></script>")
 
 var input_cnt = 0;
 
+var indent = "";
+
 function runlang(t, inp) {
     // wrapper
     input_cnt = 0;
@@ -14,7 +16,7 @@ function runlang(t, inp) {
             o += "=== Test case #"+(x+1)+", input:"+a[x].replace(/\n/g,"\\n")+" ===\n"+String(actualRunlang(t, a[x]))+"\n\n";
         return o;
     } catch (error) {
-        return error;
+        return t+"\n"+indent+"^\n"+error;
     }
 }
 
