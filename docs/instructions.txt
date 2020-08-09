@@ -33,8 +33,6 @@
  ¦Space character, PUSH 1
 !¦PUSH 2
 "¦3
-"¦
-"¦
 #¦4
 $¦5
 %¦6
@@ -82,19 +80,18 @@ N¦push "0...9ABC...XYZ"
 O¦split
 P¦join
 Q¦chop
-R¦join "
+R¦join "\n"
 S¦join ""
 T¦join " "
 U¦join ","
 V¦reverse
 W¦replace string
 X¦replace regex
-Y¦split "
+Y¦split "\n"
 Z¦split ""
 [¦split " "
 \¦split ","
 ]¦push "⌠"
-]¦
 ^¦push "⌡"
 _¦<
 `¦=
