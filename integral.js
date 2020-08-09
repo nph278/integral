@@ -648,6 +648,7 @@ function actualRunlang(t, inp) {
                     break;
             }
         }
+        indent += " ";
     }
     return stack.map(String)
         .join("\n");
