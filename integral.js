@@ -1,21 +1,24 @@
 document.write("<script language=javascript src='constants.js'></script>")
 
+var input_cnt = 0;
+
+var indent = "";
+
 function runlang(t, inp) {
     // wrapper
+    input_cnt = 0;
     try {
         var a = inp.split("\n\n");
         var o = "";
-        if(a.length==0)
+        if(a.length==1)
             return String(actualRunlang(t, a[0]))
         for(var x=0;x<a.length;x++)
-            o += "=== Test case #"+x+", input:"+a[x]+" ===\n"+String(actualRunlang(t, a[x], sep))+"\n\n";
+            o += "=== Test case #"+(x+1)+", input:"+a[x].replace(/\n/g,"\\n")+" ===\n"+String(actualRunlang(t, a[x]))+"\n\n";
         return o;
     } catch (error) {
-        return error;
+        return t+"\n"+indent+"^\n"+error;
     }
 }
-
-var input_cnt = 0;
 
 function sPop(arr, inp) {
     a = arr.pop();
@@ -34,8 +37,10 @@ function actualRunlang(t, inp) {
             .length; i++) {
             if (!!Number(inp.split("\n")[i]) || inp.split("\n")[i] === "0") {
                 new_inp.push(parseFloat(inp.split("\n")[i]));
+                stack.push(parseFloat(inp.split("\n")[i]));
             } else {
                 new_inp.push(eval(inp.split("\n")[i]));
+                stack.push(eval(inp.split("\n")[i]));
             }
         }
     }
@@ -643,6 +648,7 @@ function actualRunlang(t, inp) {
                     break;
             }
         }
+        indent += " ";
     }
     return stack.map(String)
         .join("\n");
