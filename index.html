@@ -134,7 +134,9 @@ To allow test suites, separate several tests with two newlines" spellcheck="fals
            setInterval(function() {
                byteselm.innerHTML = codelm.value.length;
                numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
-               stroutelm.value    = '÷' + encodestr(strelm.value) + '÷';
+               stroutelm.value    = strelm.value.length == 1?
+		                        'v' + strelm.value :
+	                                '÷' + encodestr(strelm.value) + '÷';
 
                postTemplate();
 
