@@ -36,7 +36,7 @@ Implicit output at the end of the program
 
 ## FAQ
 ### Why is it xx bytes? Shouldn't it be yy bytes?
-Like most modern golfing languages, which encode an SBCS codepage, Integral encodes the CP437 codepage, in which every character is always 256 bytes. If you want to take a look at the entire codepage, you can go to [constants.js](https://github.com/A-ee/integral/blob/master/constants.js). So, don't be surprised when the code length in UTF-8 is different than the shown code length!
+Like most modern golfing languages, which encode an SBCS codepage, Integral encodes the CP437 codepage, in which every character is always a byte. If you want to take a look at the entire codepage, you can go to [constants.js](https://github.com/A-ee/integral/blob/master/constants.js). So, don't be surprised when the code length in UTF-8 is different than the shown code length!
 
 ### Why does the interpreter not work?
 If anything doesn't work in the online interpreter, try refreshing the interpreter, to clear your browser cache. This works
