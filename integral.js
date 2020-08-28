@@ -20,13 +20,6 @@ function runlang(t, inp) {
     }
 }
 
-function sPop(arr, inp) {
-    a = arr.pop();
-    if(a == undefined) {
-         return inp[inp.length-(input_cnt++)%inp.length-1]
-    }
-    return a;
-}
 
 function actualRunlang(t, inp) {
     inp = inp || "";

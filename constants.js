@@ -102,3 +102,11 @@ function decodeLink(a) {
         return unescape(a)
     }
 }
+
+function sPop(arr, inp) {
+    a = arr.pop();
+    if(a == undefined) {
+         return inp[inp.length-(input_cnt++)%inp.length-1]
+    }
+    return a;
+}
