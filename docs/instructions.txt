@@ -23,11 +23,11 @@
 ▬¦BIT-NOT
 ↨¦BIT-OR
 ↑¦
-↓¦BIT-AND
-→¦BIT-XOR
-←¦BIT-NOR
-∟¦BIT-NAND
-↔¦BIT-XNOR
+↓¦BITWISE-AND
+→¦BITWISE-XOR
+←¦BITWISE-NOR
+∟¦BITWISE-NAND
+↔¦BITWISE-XNOR
 ▲¦+1
 ▼¦-1
  ¦Space character, PUSH 1
@@ -241,7 +241,7 @@ z¦128
 ≡¦
 ±¦
 ≥¦
-≤¦End then begin enc
+≤¦End string then begin compressed string
 ⌠¦End then begin string
 ⌡¦begin/end string
 ÷¦begin/end encoded string
