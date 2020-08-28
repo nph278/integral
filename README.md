@@ -16,7 +16,7 @@ Even shorter:
 ÷▄llo,▒╦ld!
 ```
 
-Integral uses an optimized 130 word dictionary to optimally compress any occurance of characters. Wrapping your text in `÷` instead of `⌡` tells the interpreter to automatically decompress the string. And like `⌡` s, if you have a `÷` at the end of a program, you can leave it off.
+Integral uses an optimized 130 word dictionary to optimally compress any occurrence of characters. Wrapping your text in `÷` instead of `⌡` tells the interpreter to automatically decompress the string. And like `⌡` s, if you have a `÷` at the end of a program, you can leave it off. `⌠` tells the interpreter to end a string, and automatically start a new one. `≤` works similarly but starts a compressed string.
 
 ## Quine
 ```
