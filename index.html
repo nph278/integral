@@ -1,149 +1,17 @@
 <!DOCTYPE html>
-<html id="html-style" style="color: black; background-color: white; font-family: Arial; filter: invert(0%);"><head>
-        <title>Integral Interpreter</title>
-        <style type="text/css">
-            pre, textarea, input {
-                font-family: consolas;
-            }
-            .dropdown {
-                display: inline-block;
-                border-bottom: 1px dotted black;
-            }
-            .dropdown-content {
-                 display: none;
-                 position: absolute;
-                 background-color: white;
-                 color:black;
-                 border:1px solid;
-                 padding: 3px 16px;
-            }
-            .dropdown:hover .dropdown-content {
-                display: block;
-                border-radius: 6px;
-            }
-	</style>
-    </head>
-    <body>
-        <div class="dropdown">
-            <b><a href="https://github.com/nph278/integral" target="_blank" style="color:blue">Integral</a> interpreter </b>
-            <div class="dropdown-content">
-		Integral (<a href="https://chat.stackexchange.com/rooms/111375/integral" style="color:red">PPCG chat</a>) is a stacked-based programming language that PPCG user <a href="https://codegolf.stackexchange.com/users/95627/nph" target="_blank" style="color:orange">nph</a> came up with. It uses code page 437.
-            </div>
-        </div>
+<html lang="en">
 
-        <i><a href="table.html" target="_blank" style="color:purple">(Instruction table)</a></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integral Interpreter</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/interpreter.js" defer></script>
+    <script src="js/encoder.js" defer></script>
+</head>
 
-        <button style="border:1px solid;
-		       background-color:#fff" onclick="outelm.value = runlang(codelm.value, inelm.value)">
-             Run (Esc):<span id="byteselm">12</span> bytes
-        </button>
+<body>
 
-        <button onclick="permaLink()" style="border:1px solid; background-color:#fff">
-             Permalink
-        </button>
+</body>
 
-        <button onclick="switchColor()" style="border:1px solid; background-color:#fff">
-             <span id="light_or_dark">Dark</span> mode
-        </button><br>
-
-        <textarea title="code" id="codelm" placeholder="Enter your code" spellcheck="false" style="margin: 0px; width: 696px; height: 309px;">        </textarea>
-
-        <textarea id="templateelm" placeholder="SE post template" readonly="" margin:0="" style="margin: 0px;
-                         border:#fff;
-                         width: 696px; height: 309px;;">        </textarea>
-       <br>
-
-        <textarea id="inelm" placeholder="Enter inputs, newline separated.
-
-Your inputs need to be un-evaluated: e.g. to enter a string with a trailing newline, you do 'hello\n'.
-
-To allow test suites, separate several tests with two newlines" spellcheck="false" style="margin: 0px; height: 309px; width: 696px;">        </textarea>
-
-        <textarea id="outelm" placeholder="output appears here" readonly="" margin:0="" style="margin: 0px; border: rgb(255, 255, 255); width: 696px; height: 309px;">        </textarea><br>
-
-        <div style="align:left">
-            <input placeholder="encode integers here" type="number" id="numelm" style="border:1px solid">
-
-            <input placeholder="output here" type="text" id="numoutelm" style="border:#fff" readonly=""><br>
-        </div>
-
-        <div style="align:right">
-            <input placeholder="encode string here" type="text" id="strelm" spellcheck="false" style="border:1px solid">
-
-            <input style="border:#fff" placeholder="output here" type="text" id="stroutelm" readonly="">
-        </div><br>
-
-        <script type="text/javascript" src="integral.js"></script><script language="javascript" src="constants.js"></script>
-        <script type="text/javascript">
-            function qstr(qs) {
-                var s = location.href.replace("?","?&").split("&");
-                for(i = 1; i < s.length; i++)
-                    if(s[i].split("=")[0] == qs)
-                        return s[i].split("=")[1];
-                return "";
-            }
-
-            var codelm      = document.getElementById("codelm");
-            var byteslm     = document.getElementById("byteselm");
-            var templateelm = document.getElementById("templateelm");
-
-            var x           = decodeLink(qstr("code"));
-            document.getElementById("codelm")  .value  = x;
-
-            x = decodeLink(qstr("input"));
-            document.getElementById("inelm")   .value  = x;
-
-            document.getElementById("outelm").value  = runlang(codelm.value, inelm.value);
-
-            function postTemplate(){
-                var header = "# [Integral](https://github.com/nph278/integral), " +
-                             byteselm.innerHTML                                   +
-                             " Bytes\n\n";
-                var body   = codelm.value;
-
-           templateelm.value = header                                                 +
-                               '<pre>\n'                                              +
-                               body                                                   +
-                               '\n</pre>'                                             +
-                               '\n\n[Try it!](https://nph278.github.io/integral/?code=' +
-                               encodeLink(codelm.value)                               +
-                               '&input='                                              +
-                               encodeLink(inelm.value)                                +
-                               ")\n\n";
-            }
-
-            function permaLink(){
-                outelm.value = '[`'                                              +
-			       codelm.value                                      +
-			       '`](https://nph278.github.io/integral/?code='     +
-			       encodeLink(codelm.value)                          +
-			       '&input='                                         +
-			       encodeLink(inelm.value)                           +
-			       ')';
-            }
-
-            function switchColor() {
-                var x = document.getElementById("html-style").style;
-                x.setProperty('filter', 'invert(' + ((x.filter == "invert(100%)") ? "0%" : "100%") + ")");
-            }
-       </script>
-
-       <script type="text/javascript">
-           setInterval(function() {
-               byteselm.innerHTML = codelm.value.length;
-               numoutelm.value    = ';' + encode(Number(numelm.value)) + ';';
-               stroutelm.value    = strelm.value.length == 1?
-		                        'v' + strelm.value :
-	                                '÷' + encodestr(strelm.value) + '÷';
-
-               postTemplate();
-
-               light_or_dark.innerHTML = document.getElementById("html-style").style.filter == 'invert(100%)' ? 'Light' : 'Dark';
-           }, 1);
-           document.addEventListener ("keydown", e => {
-               if(e.code=="Escape")
-                    outelm.value = runlang(codelm.value, inelm.value);
-           })
-        </script>
-
-</body></html>
+</html>
