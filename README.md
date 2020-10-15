@@ -73,3 +73,7 @@ A tutorial might happen sometime...
 * [Online interpreter link](https://nph278.github.io/integral/)
 * [Instruction reference](https://nph278.github.io/integral/docs/table.html)
 * [Language Showcase](https://codegolf.stackexchange.com/a/208978/96495)
+
+## Note about the old interpreter
+
+The old interpreter by A-ee can be found in the `old` branch.
