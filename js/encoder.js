@@ -64,10 +64,3 @@ function encodestr(a) {
     }
     return a;
 }
-function sPop(arr, inp) {
-    var a = arr.pop();
-    if (a == undefined) {
-        return inp[inp.length - (input_cnt++) % inp.length - 1];
-    }
-    return a;
-}
