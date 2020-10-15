@@ -1,0 +1,39 @@
+html {
+    background-color: rgb(31, 31, 31);
+}
+
+nav {
+    display: flex;
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(44, 44, 44);
+}
+
+textarea {
+    background-color: rgb(90, 90, 90);
+    height: 100px;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#code-elm, #input-elm {
+    display: flex;
+    flex: 1;
+}
+
+#output-elm {
+    display: flex;
+    width: 100%;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px black solid;
+}

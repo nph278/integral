@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integral Interpreter</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="dist/encoder.js" defer></script>
-    <script src="dist/interpreter.js" defer></script>
+    <script src="dist/encoder.js"></script>
+    <script src="dist/interpreter.js"></script>
 </head>
 
 <body>
-
+    <nav>
+        <img class="btn" id="run-btn" src="images/run.png" alt="Run code">
+        <img class="btn" id="link-btn" src="images/link.png" alt="Get permalink">
+        <img class="btn" id="se-btn" src="images/se.png" alt="Get PPCG post">
+    </nav>
+    <section id="main">
+        <textarea id="code-elm" placeholder="Code goes here..."></textarea>
+        <textarea id="input-elm" placeholder="Inputs go here..."></textarea>
+        <textarea id="output-elm" placeholder="Output appears here..."></textarea>
+    </section>
 </body>
+<script>
+    document.getElementById("run-btn").addEventListener("click", function () {
+        document.getElementById("output-elm").value = runlang(document.getElementById("code-elm").value, document.getElementById("input-elm").value);
+    });
+</script>
 
 </html>
