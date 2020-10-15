@@ -38,8 +38,8 @@
 <script>
 
     if (window.location.search) {
-        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[1]);
-        document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[2]);
+        document.getElementById("code-elm").value = decodeLink(unescape(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[1]));
+        document.getElementById("input-elm").value = decodeLink(unescape(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[2]));
     }
 
     document.getElementById("run-btn").addEventListener("click", function () {
@@ -47,11 +47,11 @@
     });
 
     document.getElementById("link-btn").addEventListener("click", function () {
-        document.getElementById("output-elm").value = "nph278.github.io/integral?code=" + encodeLink(document.getElementById("code-elm").value) + "&input=" + encodeLink(document.getElementById("input-elm").value);
+        document.getElementById("output-elm").value = "nph278.github.io/integral?code=" + escape(encodeLink(document.getElementById("code-elm").value)) + "&input=" + escape(encodeLink(document.getElementById("input-elm").value));
     });
 
     document.getElementById("se-btn").addEventListener("click", function () {
-        const link = "nph278.github.io/integral?code=" + encodeLink(document.getElementById("code-elm").value) + "&input=" + encodeLink(document.getElementById("input-elm").value);
+        const link = "nph278.github.io/integral?code=" + escape(encodeLink(document.getElementById("code-elm").value)) + "&input=" + escape(encodeLink(document.getElementById("input-elm").value));
 
         document.getElementById("output-elm").value = "# [Integral], " + document.getElementById("code-elm").value.length + " bytes\n```\n    " + document.getElementById("code-elm").value + "\n```\n[Try it]\n\n[Integral]: https://github.com/nph278/integral\n[Try it]: https://" + link
     });
