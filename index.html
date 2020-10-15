@@ -53,7 +53,7 @@
     document.getElementById("se-btn").addEventListener("click", function () {
         const link = "https://nph278.github.io/integral?code=" + escape(encodeLink(document.getElementById("code-elm").value)) + "&input=" + escape(encodeLink(document.getElementById("input-elm").value));
 
-        document.getElementById("output-elm").value = "# [Integral], " + document.getElementById("code-elm").value.length + " bytes\n```\n    " + document.getElementById("code-elm").value + "\n```\n[Try it]\n\n[Integral]: https://github.com/nph278/integral\n[Try it]: https://" + link
+        document.getElementById("output-elm").value = "# [Integral], " + document.getElementById("code-elm").value.length + " bytes\n```\n    " + document.getElementById("code-elm").value + "\n```\n[Try it]\n\n[Integral]: https://github.com/nph278/integral\n[Try it]: " + link
     });
 
     setInterval(function () {
