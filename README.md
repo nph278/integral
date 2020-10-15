@@ -30,6 +30,10 @@ Integral uses an optimized 130 word dictionary to optimally compress any occurre
 ⌡^♦►◙►⌡^♦►◙►
 ```
 
+## Note about the old interpreter
+
+The source cold for the old interpreter can be found at the `old` branch.
+
 This is what the program does behind the scenes:
 
 ```
