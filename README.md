@@ -1,9 +1,3 @@
-## WARNING
-
-The links for the new interpreter are currently a work-in-progress.
-
-By that I mean they are completley broken.
-
 ## Integral
 
 Integral is a new stack-based golfing language invented by [nph](https://codegolf.stackexchange.com/users/95627/nph).
