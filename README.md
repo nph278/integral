@@ -1,4 +1,4 @@
-## Integral
+# Integral
 
 Integral is a new stack-based golfing language invented by [nph](https://codegolf.stackexchange.com/users/95627/nph).
 
