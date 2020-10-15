@@ -36,11 +36,10 @@
     </section>
 </body>
 <script>
-    //# [Pyth], 2 bytes\n\n    FF\n\n[Try it online!][TIO-kgaxj056]\n\n[Pyth]: https://github.com/isaacg1/pyth\n[TIO-kgaxj056]: https://tio.run/##K6gsyfj/383t/38A "Pyth – Try It Online"
 
     if (window.location.search) {
-        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=")[0].slice(1, window.location.search.split("?code=").join("|").split("&input=")[0].length));
-        document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=")[1]);
+        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input")[0].slice(1, window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input")[0].length));
+        document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input")[1]);
     }
 
     document.getElementById("run-btn").addEventListener("click", function () {
