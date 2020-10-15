@@ -73,5 +73,5 @@ If it still doesn't work in <https://nph278.github.io/integral/>, feel free to r
 A tutorial might happen sometime...
 
 * [Online interpreter link](https://nph278.github.io/integral/)
-* [Instruction reference](docs/table.html)
+* [Instruction reference](https://nph278.github.io/integral/docs/table.html)
 * [Language Showcase](https://codegolf.stackexchange.com/a/208978/96495)
