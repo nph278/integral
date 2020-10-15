@@ -38,8 +38,8 @@
 <script>
 
     if (window.location.search) {
-        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input")[0].slice(1, window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input")[0].length));
-        document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input")[1]);
+        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[0].slice(1, window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[0].length));
+        document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[1]);
     }
 
     document.getElementById("run-btn").addEventListener("click", function () {
