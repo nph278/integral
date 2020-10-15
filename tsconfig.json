@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "outDir": "js",
+        "outDir": "dist",
         "watch": true,
         "lib": [
             "dom",

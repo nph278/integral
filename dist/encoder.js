@@ -64,3 +64,12 @@ function encodestr(a) {
     }
     return a;
 }
+function string_chop(str, size) {
+    if (str == null)
+        return [];
+    str = String(str);
+    size = ~~size;
+    if (size > 0)
+        return str.match(new RegExp('.{1,' + size + '}', 'g'));
+    return [str];
+}
