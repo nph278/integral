@@ -21,10 +21,33 @@
         <textarea id="input-elm" placeholder="Inputs go here..."></textarea>
         <textarea id="output-elm" placeholder="Output appears here..."></textarea>
     </section>
+    <br>
+    <section id="encoders">
+        <div id="numberencode">
+            <input type="string" id="numberin" placeholder="Number to encode"> > <input type="text" id="numberout"
+                readonly placeholder="Encoded number">
+        </div>
+        <div id="stringencode">
+            <input type="text" id="stringin" placeholder="String to encode"> > <input type="text" id="stringout"
+                readonly placeholder="Encoded string">
+        </div>
+    </section>
 </body>
 <script>
     document.getElementById("run-btn").addEventListener("click", function () {
         document.getElementById("output-elm").value = runlang(document.getElementById("code-elm").value, document.getElementById("input-elm").value);
+    });
+
+    document.getElementById("numberin").addEventListener("keypress", function () {
+        setTimeout(function () {
+            document.getElementById("numberout").value = ";" + encode(+document.getElementById("numberin").value) + ";";
+        }, 1);
+    });
+
+    document.getElementById("stringin").addEventListener("keypress", function () {
+        setTimeout(function () {
+            document.getElementById("stringout").value = "÷" + encodestr(document.getElementById("stringin").value) + "÷";
+        }, 1);
     });
 </script>
 
