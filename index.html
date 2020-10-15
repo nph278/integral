@@ -38,7 +38,7 @@
 <script>
 
     if (window.location.search) {
-        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[1].slice(1, window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[1].length));
+        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[1]);
         document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=").join("|").split("&input").join("|").split("|")[2]);
     }
 
