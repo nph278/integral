@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "outDir": "dist",
+        "watch": true,
+        "lib": [
+            "dom",
+            "ES2015",
+            "ES5",
+            "ES6"
+        ]
+    }
+}
