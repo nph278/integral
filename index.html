@@ -39,17 +39,15 @@
         document.getElementById("output-elm").value = runlang(document.getElementById("code-elm").value, document.getElementById("input-elm").value);
     });
 
-    document.getElementById("numberin").addEventListener("keypress", function () {
-        setTimeout(function () {
-            document.getElementById("numberout").value = ";" + encode(+document.getElementById("numberin").value) + ";";
-        }, 1);
-    });
+    setInterval(function () {
+        document.getElementById("numberout").value = ";" + encode(+document.getElementById("numberin").value) + ";";
+    }, 10);
 
-    document.getElementById("stringin").addEventListener("keypress", function () {
-        setTimeout(function () {
-            document.getElementById("stringout").value = "÷" + encodestr(document.getElementById("stringin").value) + "÷";
-        }, 1);
-    });
+
+    setInterval(function () {
+        const encoded = encodestr(document.getElementById("stringin").value);
+        document.getElementById("stringout").value = document.getElementById("stringin").value.length !== 1 ? ("÷" + encoded + "÷") : ("v" + encoded);
+    }, 10);
 </script>
 
 </html>
