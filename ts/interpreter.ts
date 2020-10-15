@@ -1,7 +1,7 @@
 let input_cnt = 0;
 let indent = '';
 
-function sPop(arr, inp) {
+function sPop(arr: any[], inp) {
   const a = arr.pop();
   if (a == undefined) {
     return inp[inp.length - (input_cnt++) % inp.length - 1]

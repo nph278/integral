@@ -42,3 +42,8 @@ input {
     display: flex;
     width: 100%;
 }
+
+#byteselm {
+    font-family: monospace;
+    font-size: 2em;
+}

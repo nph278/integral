@@ -73,3 +73,23 @@ function string_chop(str, size) {
         return str.match(new RegExp('.{1,' + size + '}', 'g'));
     return [str];
 }
+function encodeLink(a) {
+    try {
+        return btoa(a.split("").map(function (i) { return String.fromCharCode(chars.indexOf(i)); })
+            .join(""))
+            .replace(/=+$/, '');
+    }
+    catch (error) {
+        return escape(a);
+    }
+}
+function decodeLink(a) {
+    try {
+        return atob(a)
+            .split("").map(function (i) { return chars[i.charCodeAt(0)]; })
+            .join("");
+    }
+    catch (error) {
+        return unescape(a);
+    }
+}

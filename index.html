@@ -15,11 +15,12 @@
         <img class="btn" id="run-btn" src="images/run.png" alt="Run code">
         <img class="btn" id="link-btn" src="images/link.png" alt="Get permalink">
         <img class="btn" id="se-btn" src="images/se.png" alt="Get PPCG post">
+        <span id="byteselm"></span>
     </nav>
     <section id="main">
         <textarea id="code-elm" placeholder="Code goes here..."></textarea>
         <textarea id="input-elm" placeholder="Inputs go here..."></textarea>
-        <textarea id="output-elm" placeholder="Output appears here..."></textarea>
+        <textarea id="output-elm" placeholder="Output appears here..." readonly></textarea>
     </section>
     <br>
     <section id="encoders">
@@ -35,18 +36,32 @@
     </section>
 </body>
 <script>
+    //# [Pyth], 2 bytes\n\n    FF\n\n[Try it online!][TIO-kgaxj056]\n\n[Pyth]: https://github.com/isaacg1/pyth\n[TIO-kgaxj056]: https://tio.run/##K6gsyfj/383t/38A "Pyth – Try It Online"
+
+    if (window.location.search) {
+        document.getElementById("code-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=")[0].slice(1, window.location.search.split("?code=").join("|").split("&input=")[0].length));
+        document.getElementById("input-elm").value = decodeLink(window.location.search.split("?code=").join("|").split("&input=")[1]);
+    }
+
     document.getElementById("run-btn").addEventListener("click", function () {
         document.getElementById("output-elm").value = runlang(document.getElementById("code-elm").value, document.getElementById("input-elm").value);
     });
 
+    document.getElementById("link-btn").addEventListener("click", function () {
+        document.getElementById("output-elm").value = "nph278.github.io/integral?code=" + encodeLink(document.getElementById("code-elm").value) + "&input=" + encodeLink(document.getElementById("input-elm").value);
+    });
+
+    document.getElementById("se-btn").addEventListener("click", function () {
+        const link = "nph278.github.io/integral?code=" + encodeLink(document.getElementById("code-elm").value) + "&input=" + encodeLink(document.getElementById("input-elm").value);
+
+        document.getElementById("output-elm").value = "# [Integral], " + document.getElementById("code-elm").value.length + " bytes\n```\n    " + document.getElementById("code-elm").value + "\n```\n[Try it]\n\n[Integral]: https://github.com/nph278/integral\n[Try it]: https://" + link
+    });
+
     setInterval(function () {
         document.getElementById("numberout").value = ";" + encode(+document.getElementById("numberin").value) + ";";
-    }, 10);
-
-
-    setInterval(function () {
         const encoded = encodestr(document.getElementById("stringin").value);
         document.getElementById("stringout").value = document.getElementById("stringin").value.length !== 1 ? ("÷" + encoded + "÷") : ("v" + encoded);
+        document.getElementById("byteselm").innerHTML = String(document.getElementById("code-elm").value.length) + " bytes";
     }, 10);
 </script>
 

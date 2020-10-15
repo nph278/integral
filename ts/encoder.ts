@@ -17,7 +17,7 @@ const common_patterns = ['andt', 'ment', 'atio', 'ions', 'thec', 'inth', 'ngth',
 const chars = "×☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↑↓→←∟↔▲▼ !\"#$%&'()*+,-./0123456789:;" +
   "<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~⌂Ç" +
   "üéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞" +
-  "╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■Þ"
+  "╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■Þ";
 
 function encode(a: number) {
   if (a === 0) {
@@ -81,4 +81,24 @@ function string_chop(str: string, size: number) {
     return str.match(new RegExp('.{1,' + size + '}', 'g'));
 
   return [str];
+}
+
+function encodeLink(a: string) {
+  try {
+    return btoa(a.split("").map(i => String.fromCharCode(chars.indexOf(i)))
+      .join(""))
+      .replace(/=+$/, '')
+  } catch (error) {
+    return escape(a)
+  }
+}
+
+function decodeLink(a: string) {
+  try {
+    return atob(a)
+      .split("").map(i => chars[i.charCodeAt(0)])
+      .join("")
+  } catch (error) {
+    return unescape(a)
+  }
 }
