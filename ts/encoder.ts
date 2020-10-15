@@ -1,4 +1,4 @@
-let common_patterns = ['andt', 'ment', 'atio', 'ions', 'thec', 'inth', 'ngth', 'here',
+const common_patterns = ['andt', 'ment', 'atio', 'ions', 'thec', 'inth', 'ngth', 'here',
   'with', 'thei', 'sthe', 'thes', 'ting', 'sand', 'fthe', 'this',
   'ethe', 'ofth', 'from', 'ingt', 'that', 'thep', 'dthe', 'ther',
   'rthe', 'tthe', 'nthe', 'them', 'othe', 'tion', 'ont', 'eth',
@@ -14,7 +14,7 @@ let common_patterns = ['andt', 'ment', 'atio', 'ions', 'thec', 'inth', 'ngth', '
   'it', 'ed', 'In', 'in', 'al', 'at', 'He', 'he', 'ng', 'en',
   'Th', 'th'];
 
-let chars = "×☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↑↓→←∟↔▲▼ !\"#$%&'()*+,-./0123456789:;" +
+const chars = "×☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↑↓→←∟↔▲▼ !\"#$%&'()*+,-./0123456789:;" +
   "<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~⌂Ç" +
   "üéâäàåçêëèïîìÄÅÉæÆôöòûùÿÖÜ¢£¥₧ƒáíóúñÑªº¿⌐¬½¼¡«»░▒▓│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞" +
   "╟╚╔╩╦╠═╬╧╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀αßΓπΣσµτΦΘΩδ∞φε∩≡±≥≤⌠⌡÷≈°∙·√ⁿ²■Þ"

@@ -1,13 +1,13 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "ES5",
         "outDir": "js",
         "watch": true,
         "lib": [
             "dom",
-            "es2015",
-            "es5",
-            "es6"
+            "ES2015",
+            "ES5",
+            "ES6"
         ]
     }
 }
