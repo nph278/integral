@@ -76,4 +76,4 @@ A tutorial might happen sometime...
 
 ## Note about the old interpreter
 
-The old interpreter by A-ee can be found in the [`old` tag](https://github.com/nph278/integral/releases/tag/old).
+The old interpreter source code by A-ee can be found in the [`old` tag](https://github.com/nph278/integral/releases/tag/old).
